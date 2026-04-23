@@ -233,6 +233,7 @@
           <li><a href="#local">Local setup</a></li>
           <li><a href="#retail-dc">Retail DC demo</a></li>
           <li><a href="#gcp">GCP deploy</a></li>
+          <li><a href="#custom-domain">Custom domain (HTTPS LB)</a></li>
           <li><a href="#gotchas">First-run gotchas</a></li>
           <li><a href="#ops">Operations</a></li>
           <li><a href="#ref">Reference</a></li>
@@ -648,6 +649,186 @@ gcloud run services add-iam-policy-binding bi-superset-web \
       Dashboard is at <code>/superset/dashboard/retail-dc-ops/</code>. Admin login is the same as the local <code>.env</code> value because the Superset metadata DB is shared.</p>
   </section>
 
+  <section id="custom-domain">
+    <h2>Custom domain (HTTPS LB)</h2>
+    <p class="lead">Fronting Cloud Run with a branded hostname over Google-managed TLS.</p>
+
+    <p>The goal is <code>https://bi-superset.2nth.ai</code> (or whatever subdomain you choose) resolving to the Cloud Run service with a valid TLS certificate.</p>
+
+    <div class="callout warn">
+      <strong>Why not native Cloud Run domain mapping?</strong> <code>gcloud run domain-mappings create</code> returns <code>501 UNIMPLEMENTED: Creating domain mappings is not allowed in africa-south1</code>. Managed mappings are restricted to a handful of regions (us-central1, us-east1, europe-west1, asia-*). The official GCP workaround for every other region is a Global External HTTPS Load Balancer with a Serverless NEG pointing at the Cloud Run service &mdash; same behaviour, six extra resources.
+    </div>
+
+    <h3>The LB chain</h3>
+    <figure>
+      <svg class="arch" viewBox="0 0 860 280" xmlns="http://www.w3.org/2000/svg" aria-label="https load balancer chain">
+        <defs>
+          <marker id="arrow-lb" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#4a4e69"/>
+          </marker>
+        </defs>
+
+        <!-- Browser / DNS -->
+        <rect class="box" x="10" y="110" width="110" height="48" rx="4"/>
+        <text class="label" x="65" y="130" text-anchor="middle">Browser</text>
+        <text class="sub"   x="65" y="146" text-anchor="middle">bi-superset.2nth.ai</text>
+
+        <rect class="box" x="140" y="110" width="110" height="48" rx="4"/>
+        <text class="label" x="195" y="130" text-anchor="middle">Cloudflare DNS</text>
+        <text class="sub"   x="195" y="146" text-anchor="middle">A record, DNS-only</text>
+
+        <!-- Anycast IP -->
+        <rect class="box-accent" x="270" y="110" width="110" height="48" rx="4"/>
+        <text class="label" x="325" y="130" text-anchor="middle">Anycast IP</text>
+        <text class="sub"   x="325" y="146" text-anchor="middle">global static</text>
+
+        <!-- LB chain column -->
+        <text class="group-label" x="400" y="30" text-anchor="start">google front-end (global)</text>
+        <rect class="group" x="400" y="40" width="300" height="200" rx="6"/>
+        <rect class="box" x="420" y="60" width="260" height="30" rx="3"/>
+        <text class="label" x="550" y="79" text-anchor="middle">forwarding-rule :443</text>
+        <rect class="box" x="420" y="98" width="260" height="30" rx="3"/>
+        <text class="label" x="550" y="117" text-anchor="middle">target-https-proxy + managed cert</text>
+        <rect class="box" x="420" y="136" width="260" height="30" rx="3"/>
+        <text class="label" x="550" y="155" text-anchor="middle">url-map (default backend)</text>
+        <rect class="box" x="420" y="174" width="260" height="30" rx="3"/>
+        <text class="label" x="550" y="193" text-anchor="middle">backend-service (HTTP)</text>
+        <rect class="box" x="420" y="212" width="260" height="24" rx="3"/>
+        <text class="label" x="550" y="228" text-anchor="middle">serverless NEG (africa-south1)</text>
+
+        <!-- Cloud Run -->
+        <rect class="box-accent" x="720" y="110" width="130" height="48" rx="4"/>
+        <text class="label" x="785" y="130" text-anchor="middle">Cloud Run</text>
+        <text class="sub"   x="785" y="146" text-anchor="middle">bi-superset-web</text>
+
+        <!-- Arrows -->
+        <line class="arrow" x1="120" y1="134" x2="140" y2="134"/>
+        <line class="arrow" x1="250" y1="134" x2="270" y2="134"/>
+        <line class="arrow" x1="380" y1="134" x2="420" y2="74"/>
+        <line class="arrow" x1="550" y1="90"  x2="550" y2="98"/>
+        <line class="arrow" x1="550" y1="128" x2="550" y2="136"/>
+        <line class="arrow" x1="550" y1="166" x2="550" y2="174"/>
+        <line class="arrow" x1="550" y1="204" x2="550" y2="212"/>
+        <line class="arrow" x1="680" y1="224" x2="720" y2="158"/>
+      </svg>
+      <figcaption>One anycast IP, six GCP resources, one DNS record. Google Front End terminates TLS and reverse-proxies to Cloud Run over its internal backbone.</figcaption>
+    </figure>
+
+    <h3>Provisioning &mdash; seven <code>gcloud</code> commands</h3>
+    <pre><code>export PROJECT=nth-bi-stack
+export REGION=africa-south1
+export DOMAIN=bi-superset.2nth.ai
+export SERVICE=bi-superset-web
+
+gcloud services enable compute.googleapis.com --project=$PROJECT
+
+# 1. Anycast IP
+gcloud compute addresses create bi-superset-ip \
+  --network-tier=PREMIUM --ip-version=IPV4 --global --project=$PROJECT
+
+# 2. Serverless NEG (regional, points at the Cloud Run service)
+gcloud compute network-endpoint-groups create bi-superset-neg \
+  --region=$REGION \
+  --network-endpoint-type=serverless \
+  --cloud-run-service=$SERVICE \
+  --project=$PROJECT
+
+# 3. Backend service (global). NOTE: no --protocol flag.
+gcloud compute backend-services create bi-superset-backend \
+  --global \
+  --load-balancing-scheme=EXTERNAL_MANAGED \
+  --project=$PROJECT
+
+gcloud compute backend-services add-backend bi-superset-backend \
+  --global \
+  --network-endpoint-group=bi-superset-neg \
+  --network-endpoint-group-region=$REGION \
+  --project=$PROJECT
+
+# 4. URL map
+gcloud compute url-maps create bi-superset-urlmap \
+  --default-service=bi-superset-backend \
+  --project=$PROJECT
+
+# 5. Managed SSL cert (will stay PROVISIONING until DNS resolves)
+gcloud compute ssl-certificates create bi-superset-cert \
+  --domains=$DOMAIN --global --project=$PROJECT
+
+# 6. HTTPS target proxy
+gcloud compute target-https-proxies create bi-superset-https-proxy \
+  --url-map=bi-superset-urlmap \
+  --ssl-certificates=bi-superset-cert \
+  --project=$PROJECT
+
+# 7. Forwarding rule — binds anycast IP:443 to the HTTPS proxy
+gcloud compute forwarding-rules create bi-superset-fwd-rule-https \
+  --load-balancing-scheme=EXTERNAL_MANAGED \
+  --network-tier=PREMIUM \
+  --address=bi-superset-ip \
+  --global \
+  --target-https-proxy=bi-superset-https-proxy \
+  --ports=443 \
+  --project=$PROJECT
+
+# Read the anycast IP back
+gcloud compute addresses describe bi-superset-ip --global \
+  --project=$PROJECT --format='value(address)'</code></pre>
+
+    <h3>DNS &mdash; what to add in Cloudflare</h3>
+    <table>
+      <thead><tr><th>Field</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Type</td><td><code>A</code></td></tr>
+        <tr><td>Name</td><td><code>bi-superset</code></td></tr>
+        <tr><td>IPv4</td><td><code>&lt;anycast IP from step 1&gt;</code></td></tr>
+        <tr><td>Proxy status</td><td><strong>DNS only</strong> (grey cloud)</td></tr>
+        <tr><td>TTL</td><td>Auto</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warn">
+      <strong>Cloudflare must be grey-cloud, not orange.</strong> If you proxy through Cloudflare, Google&rsquo;s managed cert can&rsquo;t complete HTTP-01 validation because Cloudflare terminates TLS first &mdash; the cert stays <code>FAILED_NOT_VISIBLE</code> forever. Google Front End already handles anycast + TLS + DDoS absorption globally, so Cloudflare adds nothing useful in front of it.
+    </div>
+
+    <h3>Three gotchas worth knowing</h3>
+    <table>
+      <thead><tr><th>Symptom</th><th>Root cause</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>add-backend</code> fails: <em>Port name is not supported for a backend service with Serverless NEGs</em></td>
+          <td>Creating the backend service with <code>--protocol=HTTPS</code> stamps <code>portName: https</code> on it. Serverless NEGs reject any port name.</td>
+          <td>Create the backend service with no <code>--protocol</code> flag at all. If you already created it wrong: <code>gcloud compute backend-services update ... --protocol=HTTP --port-name=http</code>.</td>
+        </tr>
+        <tr>
+          <td>Cert stuck at <code>PROVISIONING</code> for &gt;1 hour</td>
+          <td>DNS hasn&rsquo;t been added or Cloudflare is proxying (orange cloud). Google&rsquo;s CA does HTTP-01 validation against the anycast IP; without correct DNS, validation can&rsquo;t start.</td>
+          <td>Confirm <code>dig +short bi-superset.2nth.ai</code> returns the anycast IP. If Cloudflare proxy is on, switch to DNS-only.</td>
+        </tr>
+        <tr>
+          <td><code>501 UNIMPLEMENTED</code> from <code>gcloud run domain-mappings create</code></td>
+          <td>africa-south1 is not a supported region for managed domain mappings.</td>
+          <td>This whole Load Balancer dance is the workaround.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Verify</h3>
+    <pre><code>dig +short bi-superset.2nth.ai              # expect the anycast IP
+curl -sI https://bi-superset.2nth.ai/login/ # expect HTTP 200 (after cert ACTIVE)
+gcloud compute ssl-certificates describe bi-superset-cert --global \
+  --project=nth-bi-stack --format='value(managed.status)'
+# PROVISIONING → ACTIVE, usually 15&ndash;45 min after DNS resolves.</code></pre>
+
+    <h3>Teardown (reverse order)</h3>
+    <pre><code>gcloud compute forwarding-rules delete bi-superset-fwd-rule-https --global --quiet
+gcloud compute target-https-proxies delete bi-superset-https-proxy --quiet
+gcloud compute ssl-certificates delete bi-superset-cert --global --quiet
+gcloud compute url-maps delete bi-superset-urlmap --quiet
+gcloud compute backend-services delete bi-superset-backend --global --quiet
+gcloud compute network-endpoint-groups delete bi-superset-neg --region=africa-south1 --quiet
+gcloud compute addresses delete bi-superset-ip --global --quiet</code></pre>
+  </section>
+
   <section id="gotchas">
     <h2>First-run gotchas</h2>
     <p class="lead">Four runtime issues caught by the initial bring-up that are now fixed in the image.</p>
@@ -730,6 +911,7 @@ bash gcp/deploy-web.sh
         <tr><td>Neon</td><td><code>ep-&lt;id&gt;.&lt;az&gt;.eu-central-1.aws.neon.tech</code></td><td>one project, one <em>production</em> branch</td></tr>
         <tr><td>Upstash</td><td><code>&lt;name&gt;.upstash.io:6379</code></td><td>free tier, af-south-1</td></tr>
         <tr><td>Artifact Registry</td><td><code>africa-south1-docker.pkg.dev/&lt;gcp-project&gt;/bi-stack</code></td><td>superset image, linux/amd64</td></tr>
+        <tr><td>Custom domain</td><td><code>https://bi-superset.&lt;your-domain&gt;</code></td><td>Global External HTTPS LB &rarr; Serverless NEG &rarr; Cloud Run; Google-managed cert</td></tr>
       </tbody>
     </table>
 
