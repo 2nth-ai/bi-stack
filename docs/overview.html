@@ -543,7 +543,8 @@ gh pr checkout 2          # retail DC demo (not yet merged)
 
 # 2. Generate .env from a Neon pooled URI.
 #    secrets.txt lives only on disk (gitignored, mode 600).
-echo 'postgresql://user:pw@ep-xxxx-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require' > secrets.txt
+# Paste your Neon pooled URI into secrets.txt (format shown in .env.example)
+# e.g. scheme://USER:PASS@ep-&lt;id&gt;-pooler.&lt;region&gt;.aws.neon.tech/neondb?sslmode=require
 ./scripts/setup-env.sh
 
 # 3. One-time schema init on Neon (use the SQL Editor in the Neon console)
@@ -643,7 +644,7 @@ gcloud run services add-iam-policy-binding bi-superset-web \
     </div>
 
     <h3>Result</h3>
-    <p>Public URL: <code>https://bi-superset-web-506477742062.africa-south1.run.app/login/</code> (HTTP 200).
+    <p>Public URL: <code>https://bi-superset-web-&lt;project-number&gt;.africa-south1.run.app/login/</code> (HTTP 200).
       Dashboard is at <code>/superset/dashboard/retail-dc-ops/</code>. Admin login is the same as the local <code>.env</code> value because the Superset metadata DB is shared.</p>
   </section>
 
@@ -725,10 +726,10 @@ bash gcp/deploy-web.sh
       <thead><tr><th>Service</th><th>Where</th><th>Notes</th></tr></thead>
       <tbody>
         <tr><td>Superset UI &mdash; local</td><td><code>http://localhost:8088</code></td><td>docker compose; init container must exit 0 first</td></tr>
-        <tr><td>Superset UI &mdash; cloud</td><td><code>https://bi-superset-web-506477742062.africa-south1.run.app</code></td><td>Cloud Run, 2 vCPU / 2 GiB / min 1, public</td></tr>
-        <tr><td>Neon</td><td><code>ep-round-darkness-al74ipg9.c-3.eu-central-1.aws.neon.tech</code></td><td>project <strong>2thPostGresNeon</strong>, single <em>production</em> branch</td></tr>
-        <tr><td>Upstash</td><td><code>brief-poodle-105331.upstash.io:6379</code></td><td>free tier, af-south-1</td></tr>
-        <tr><td>Artifact Registry</td><td><code>africa-south1-docker.pkg.dev/nth-bi-stack/bi-stack</code></td><td>superset image, linux/amd64</td></tr>
+        <tr><td>Superset UI &mdash; cloud</td><td><code>https://bi-superset-web-&lt;project-number&gt;.africa-south1.run.app</code></td><td>Cloud Run, 2 vCPU / 2 GiB / min 1, public</td></tr>
+        <tr><td>Neon</td><td><code>ep-&lt;id&gt;.&lt;az&gt;.eu-central-1.aws.neon.tech</code></td><td>one project, one <em>production</em> branch</td></tr>
+        <tr><td>Upstash</td><td><code>&lt;name&gt;.upstash.io:6379</code></td><td>free tier, af-south-1</td></tr>
+        <tr><td>Artifact Registry</td><td><code>africa-south1-docker.pkg.dev/&lt;gcp-project&gt;/bi-stack</code></td><td>superset image, linux/amd64</td></tr>
       </tbody>
     </table>
 
