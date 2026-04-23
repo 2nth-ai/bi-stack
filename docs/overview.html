@@ -233,6 +233,7 @@
           <li><a href="#local">Local setup</a></li>
           <li><a href="#retail-dc">Retail DC demo</a></li>
           <li><a href="#gcp">GCP deploy</a></li>
+          <li><a href="#gcp-infra">GCP infrastructure</a></li>
           <li><a href="#custom-domain">Custom domain (HTTPS LB)</a></li>
           <li><a href="#gotchas">First-run gotchas</a></li>
           <li><a href="#ops">Operations</a></li>
@@ -647,6 +648,197 @@ gcloud run services add-iam-policy-binding bi-superset-web \
     <h3>Result</h3>
     <p>Public URL: <code>https://bi-superset-web-&lt;project-number&gt;.africa-south1.run.app/login/</code> (HTTP 200).
       Dashboard is at <code>/superset/dashboard/retail-dc-ops/</code>. Admin login is the same as the local <code>.env</code> value because the Superset metadata DB is shared.</p>
+  </section>
+
+  <section id="gcp-infra">
+    <h2>GCP infrastructure</h2>
+    <p class="lead">Everything provisioned in the <code>nth-bi-stack</code> project, what it&rsquo;s for, and who can touch what.</p>
+
+    <h3>Resource inventory</h3>
+    <table>
+      <thead><tr><th>Layer</th><th>Resource</th><th>Name</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="2">Compute</td><td>Cloud Run Service</td><td><code>bi-superset-web</code></td><td>Superset gunicorn on port 8088 in <code>africa-south1</code>.</td></tr>
+        <tr><td>Artifact Registry repo</td><td><code>bi-stack</code></td><td>Private Docker repo, <code>africa-south1</code>. Holds the <code>superset:latest</code> image.</td></tr>
+        <tr><td rowspan="7">Network (Global LB)</td><td>Global address</td><td><code>bi-superset-ip</code></td><td>Anycast IPv4 for the custom domain.</td></tr>
+        <tr><td>Serverless NEG</td><td><code>bi-superset-neg</code></td><td>Regional (africa-south1) pointer at the Cloud Run service.</td></tr>
+        <tr><td>Backend service</td><td><code>bi-superset-backend</code></td><td>Global backend wrapping the NEG. Must not set a protocol (see LB gotcha).</td></tr>
+        <tr><td>URL map</td><td><code>bi-superset-urlmap</code></td><td>Routes everything to the single backend.</td></tr>
+        <tr><td>SSL cert (managed)</td><td><code>bi-superset-cert</code></td><td>Google-managed cert for the custom domain.</td></tr>
+        <tr><td>Target HTTPS proxy</td><td><code>bi-superset-https-proxy</code></td><td>Terminates TLS with the cert; forwards to the URL map.</td></tr>
+        <tr><td>Forwarding rule</td><td><code>bi-superset-fwd-rule-https</code></td><td>Binds the anycast IP on port 443 to the HTTPS proxy.</td></tr>
+        <tr><td rowspan="3">Identity</td><td>Service account</td><td><code>bi-stack-runtime</code></td><td>Runs Cloud Run; reads secrets.</td></tr>
+        <tr><td>Service account</td><td><code>bi-stack-deployer</code></td><td>Used by GitHub Actions to deploy (impersonated via WIF).</td></tr>
+        <tr><td>Workload Identity Pool + Provider</td><td><code>bi-stack-gh</code> + <code>github</code></td><td>OIDC trust for GitHub Actions so CI can impersonate <code>bi-stack-deployer</code> without a JSON key.</td></tr>
+        <tr><td>Secrets</td><td>Secret Manager (&times;8)</td><td>see table below</td><td>DB URIs, keys, admin password.</td></tr>
+        <tr><td>Policy</td><td>Org-policy override</td><td><code>iam.allowedPolicyMemberDomains</code> at project scope</td><td>Allows <code>allUsers</code> bindings (blocked at the 2nth.ai org level by default).</td></tr>
+        <tr><td>Observability</td><td>Cloud Logging (auto)</td><td>&mdash;</td><td>Captures Cloud Run stdout/stderr, LB request logs, IAM audit.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Not deployed (yet).</strong> The repo ships <code>gcp/deploy-worker.sh</code>, <code>gcp/deploy-beat.sh</code>, <code>gcp/deploy-dbt-job.sh</code> and <code>gcp/scheduler.sh</code> but they don&rsquo;t run on Cloud Run Services as shipped &mdash; Celery / dbt don&rsquo;t serve HTTP. Follow-up is either (a) wrap Celery in a supervisord + HTTP stub, (b) move Celery to a Compute Engine micro-VM, or (c) trigger dbt via Pub/Sub instead of long-running. Demo works fine without them.
+    </div>
+
+    <h3>IAM graph</h3>
+    <figure>
+      <svg class="arch" viewBox="0 0 860 310" xmlns="http://www.w3.org/2000/svg" aria-label="IAM graph">
+        <defs>
+          <marker id="arrow-iam" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#4a4e69"/>
+          </marker>
+          <marker id="arrow-iam-dim" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#52525b"/>
+          </marker>
+        </defs>
+
+        <!-- Principals (left) -->
+        <text class="group-label" x="20" y="22">principals</text>
+        <rect class="box" x="20" y="38" width="170" height="44" rx="4"/>
+        <text class="label" x="105" y="58" text-anchor="middle">GitHub Actions</text>
+        <text class="sub"   x="105" y="74" text-anchor="middle">2nth-ai/bi-stack repo</text>
+
+        <rect class="box" x="20" y="98" width="170" height="44" rx="4"/>
+        <text class="label" x="105" y="118" text-anchor="middle">Cloud Run runtime</text>
+        <text class="sub"   x="105" y="134" text-anchor="middle">bi-superset-web</text>
+
+        <rect class="box" x="20" y="158" width="170" height="44" rx="4"/>
+        <text class="label" x="105" y="178" text-anchor="middle">allUsers (public)</text>
+        <text class="sub"   x="105" y="194" text-anchor="middle">web request traffic</text>
+
+        <rect class="box" x="20" y="218" width="170" height="44" rx="4"/>
+        <text class="label" x="105" y="238" text-anchor="middle">craig@2nth.ai</text>
+        <text class="sub"   x="105" y="254" text-anchor="middle">owner, manual ops</text>
+
+        <!-- Identities (middle) -->
+        <text class="group-label" x="320" y="22">identities</text>
+        <rect class="box-accent" x="320" y="38" width="190" height="44" rx="4"/>
+        <text class="label" x="415" y="58" text-anchor="middle">bi-stack-deployer SA</text>
+        <text class="sub"   x="415" y="74" text-anchor="middle">via Workload Identity</text>
+
+        <rect class="box-accent" x="320" y="98" width="190" height="44" rx="4"/>
+        <text class="label" x="415" y="118" text-anchor="middle">bi-stack-runtime SA</text>
+        <text class="sub"   x="415" y="134" text-anchor="middle">Cloud Run service identity</text>
+
+        <!-- Targets (right) -->
+        <text class="group-label" x="620" y="22">resources / roles</text>
+        <rect class="box" x="620" y="38" width="220" height="24" rx="3"/>
+        <text class="label" x="730" y="55" text-anchor="middle">project: run.admin</text>
+        <rect class="box" x="620" y="66" width="220" height="24" rx="3"/>
+        <text class="label" x="730" y="83" text-anchor="middle">project: artifactregistry.writer</text>
+        <rect class="box" x="620" y="94" width="220" height="24" rx="3"/>
+        <text class="label" x="730" y="111" text-anchor="middle">project: iam.serviceAccountUser</text>
+        <rect class="box" x="620" y="122" width="220" height="24" rx="3"/>
+        <text class="label" x="730" y="139" text-anchor="middle">project: cloudscheduler.admin</text>
+
+        <rect class="box" x="620" y="160" width="220" height="24" rx="3"/>
+        <text class="label" x="730" y="177" text-anchor="middle">each secret: secretAccessor</text>
+
+        <rect class="box" x="620" y="198" width="220" height="24" rx="3"/>
+        <text class="label" x="730" y="215" text-anchor="middle">bi-superset-web: run.invoker</text>
+
+        <!-- Arrows -->
+        <line class="arrow" x1="190" y1="60"  x2="320" y2="60"/>
+        <line class="arrow" x1="190" y1="120" x2="320" y2="120"/>
+        <line class="arrow" x1="510" y1="60"  x2="620" y2="50"/>
+        <line class="arrow" x1="510" y1="60"  x2="620" y2="78"/>
+        <line class="arrow" x1="510" y1="60"  x2="620" y2="106"/>
+        <line class="arrow" x1="510" y1="60"  x2="620" y2="134"/>
+        <line class="arrow" x1="510" y1="120" x2="620" y2="172"/>
+        <line class="arrow" x1="190" y1="180" x2="620" y2="210"/>
+        <line class="arrow-dim" x1="190" y1="240" x2="620" y2="210"/>
+      </svg>
+      <figcaption>Least-privilege shape: deploy SA gets project-scoped admin roles; runtime SA only gets per-secret read. allUsers gets invoker on the web service only.</figcaption>
+    </figure>
+
+    <h3>Secret Manager inventory</h3>
+    <table>
+      <thead><tr><th>Secret</th><th>What goes in it</th><th>Used by</th></tr></thead>
+      <tbody>
+        <tr><td><code>SUPERSET_METADATA_DB_URI</code></td><td>Direct (unpooled) Neon URI, <code>postgresql+psycopg2://</code></td><td>Superset web (SQLAlchemy)</td></tr>
+        <tr><td><code>ANALYTICS_DB_URI</code></td><td>Direct Neon URI, plain <code>postgresql://</code></td><td>Registered inside Superset UI as a warehouse connection</td></tr>
+        <tr><td><code>NEON_POOLED_URI</code></td><td>Pooled Neon URI (has <code>-pooler</code> in host)</td><td>dbt (short-lived connections)</td></tr>
+        <tr><td><code>REDIS_URL</code></td><td>Upstash <code>rediss://default:&hellip;@&hellip;.upstash.io:6379?ssl_cert_reqs=CERT_REQUIRED</code></td><td>Superset cache; Celery broker/backend</td></tr>
+        <tr><td><code>SUPERSET_SECRET_KEY</code></td><td>42-byte base64 (openssl rand)</td><td>Flask session signing &amp; cookie HMAC</td></tr>
+        <tr><td><code>GUEST_TOKEN_JWT_SECRET</code></td><td>42-byte base64 (openssl rand)</td><td>Signs embed-mode JWTs minted by biz-demos Worker</td></tr>
+        <tr><td><code>ADMIN_PASSWORD</code></td><td>24-byte base64 (setup-env.sh)</td><td>Initial <code>admin</code> user on the metadata DB</td></tr>
+        <tr><td><code>MAPBOX_API_KEY</code></td><td>Optional. Placeholder <code>unset</code> if not using geo charts</td><td>Superset geo viz</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Cloud Run service settings &mdash; what and why</h3>
+    <table>
+      <thead><tr><th>Flag</th><th>Value</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>--cpu</code></td><td>2</td><td>Superset is CPU-bound during query orchestration; 2 cores handles concurrent users without starving gunicorn workers.</td></tr>
+        <tr><td><code>--memory</code></td><td>2Gi</td><td>Superset&rsquo;s chart pipeline holds large Pandas frames in memory briefly; 2 GiB avoids OOM on wide tables.</td></tr>
+        <tr><td><code>--concurrency</code></td><td>40</td><td>gunicorn threads config supports ~8 active requests per instance; 40 is Cloud Run&rsquo;s per-instance concurrency limit, giving headroom.</td></tr>
+        <tr><td><code>--min-instances</code></td><td>1</td><td>Always-warm. Cold starts on Superset take ~20s; demos can&rsquo;t eat that.</td></tr>
+        <tr><td><code>--max-instances</code></td><td>4</td><td>Caps cost. Demo traffic tops out at ~10 req/s; 4 instances &times; 40 concurrency = 160 parallel requests.</td></tr>
+        <tr><td><code>--timeout</code></td><td>300s</td><td>Long SQL queries to Neon can take over the default 60s. 300s matches Superset&rsquo;s own query timeout.</td></tr>
+        <tr><td><code>--port</code></td><td>8088</td><td>Matches Superset&rsquo;s in-container default.</td></tr>
+        <tr><td><code>--allow-unauthenticated</code></td><td>&mdash;</td><td>Combined with <code>allUsers roles/run.invoker</code> after the org-policy override. Superset handles auth inside.</td></tr>
+        <tr><td><code>--service-account</code></td><td><code>bi-stack-runtime</code></td><td>Least-privilege identity. Only has Secret Manager read on the 8 named secrets.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Cost expectations (rough)</h3>
+    <p>Rough monthly spend at demo-scale in <code>africa-south1</code>. Figures ignore egress and the GCP free tier; reality is usually lower.</p>
+    <table>
+      <thead><tr><th>Line</th><th>Monthly (idle)</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Cloud Run (1 warm instance, 2 CPU / 2 GiB)</td><td class="num">~$40&ndash;50</td><td>Always-on CPU billing. Drops to near-zero with <code>--min-instances=0</code> but costs ~20s cold starts.</td></tr>
+        <tr><td>Global LB forwarding rule</td><td class="num">~$18</td><td>$0.025/hr per forwarding rule, 24&times;7.</td></tr>
+        <tr><td>Artifact Registry</td><td class="num">~$0.15</td><td>$0.10/GB/mo for ~1.5 GB image.</td></tr>
+        <tr><td>Anycast IP, SSL cert, NEG, URL map, proxies</td><td class="num">$0</td><td>Free while attached to a forwarding rule.</td></tr>
+        <tr><td>Secret Manager</td><td class="num">$0</td><td>First 10 k access ops/month free; demo stays well under.</td></tr>
+        <tr><td>Cloud Logging</td><td class="num">$0&ndash;1</td><td>50 GiB/mo free; Superset is quiet.</td></tr>
+        <tr><td><strong>Total</strong></td><td class="num"><strong>~$60&ndash;70/mo</strong></td><td>At the demo&rsquo;s traffic level with min-1 warm.</td></tr>
+      </tbody>
+    </table>
+    <p class="sub" style="color:var(--ink-dim);font-size:14px;">Neon and Upstash live outside GCP; Neon is free on the hobby plan up to ~3 GB, Upstash free up to 256 MB. Both projects are well inside those limits.</p>
+
+    <h3>Observability</h3>
+    <ul>
+      <li><strong>Logs:</strong> Cloud Logging. All Cloud Run stdout/stderr lands under <code>resource.type="cloud_run_revision"</code>. Useful filters: <code>severity&gt;=ERROR</code>, <code>resource.labels.service_name="bi-superset-web"</code>.</li>
+      <li><strong>Metrics:</strong> Cloud Monitoring auto-populates request count, request latency, container CPU, container memory for each Cloud Run revision. Dashboard at <code>console.cloud.google.com/monitoring/services</code>.</li>
+      <li><strong>LB metrics:</strong> separate set under "Network services" &mdash; backend latency split between request arrival, LB time, backend time.</li>
+      <li><strong>Audit:</strong> IAM and admin activity on the project go to the auto-enabled <code>cloudaudit.googleapis.com</code> log.</li>
+    </ul>
+    <pre><code># Tail Superset errors from your terminal
+gcloud logging tail \
+  'resource.type="cloud_run_revision" AND resource.labels.service_name="bi-superset-web" AND severity&gt;=WARNING' \
+  --project=nth-bi-stack</code></pre>
+
+    <h3>Teardown</h3>
+    <p>Two paths.</p>
+    <h4 style="font-size:14px;margin:12px 0 4px;color:var(--accent);">A. Surgical &mdash; remove bi-stack while keeping the GCP project</h4>
+    <pre><code># LB chain (reverse of provisioning)
+gcloud compute forwarding-rules delete bi-superset-fwd-rule-https --global --quiet
+gcloud compute target-https-proxies delete bi-superset-https-proxy --quiet
+gcloud compute ssl-certificates delete bi-superset-cert --global --quiet
+gcloud compute url-maps delete bi-superset-urlmap --quiet
+gcloud compute backend-services delete bi-superset-backend --global --quiet
+gcloud compute network-endpoint-groups delete bi-superset-neg --region=africa-south1 --quiet
+gcloud compute addresses delete bi-superset-ip --global --quiet
+
+# Cloud Run
+gcloud run services delete bi-superset-web --region=africa-south1 --quiet
+
+# Artifact Registry image (the repo can stay empty)
+gcloud artifacts docker images delete \
+  africa-south1-docker.pkg.dev/nth-bi-stack/bi-stack/superset --delete-tags --quiet
+
+# Secrets (optional &mdash; safe to leave, they&rsquo;re unused without Cloud Run)
+for s in SUPERSET_METADATA_DB_URI ANALYTICS_DB_URI NEON_POOLED_URI REDIS_URL \
+         SUPERSET_SECRET_KEY GUEST_TOKEN_JWT_SECRET ADMIN_PASSWORD MAPBOX_API_KEY; do
+  gcloud secrets delete "$s" --quiet
+done</code></pre>
+
+    <h4 style="font-size:14px;margin:12px 0 4px;color:var(--accent);">B. Nuke &mdash; delete the whole project</h4>
+    <pre><code>gcloud projects delete nth-bi-stack
+# 30-day reversible grace period. After that, it&rsquo;s gone.
+# Neon (eu-central-1) and Upstash (af-south-1) live outside GCP — delete those from their own consoles.</code></pre>
   </section>
 
   <section id="custom-domain">
