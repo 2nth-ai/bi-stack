@@ -793,9 +793,13 @@ gcloud run services add-iam-policy-binding bi-superset-web \
         <tr><td>Anycast IP, SSL cert, NEG, URL map, proxies</td><td class="num">$0</td><td>Free while attached to a forwarding rule.</td></tr>
         <tr><td>Secret Manager</td><td class="num">$0</td><td>First 10 k access ops/month free; demo stays well under.</td></tr>
         <tr><td>Cloud Logging</td><td class="num">$0&ndash;1</td><td>50 GiB/mo free; Superset is quiet.</td></tr>
-        <tr><td><strong>Total</strong></td><td class="num"><strong>~$60&ndash;70/mo</strong></td><td>At the demo&rsquo;s traffic level with min-1 warm.</td></tr>
+        <tr><td><strong>Total (warm + LB)</strong></td><td class="num"><strong>~$60&ndash;70/mo</strong></td><td>Always-warm Cloud Run plus the LB forwarding rule.</td></tr>
+        <tr><td><strong>Total (min-0, no LB)</strong></td><td class="num"><strong>~$0&ndash;2/mo</strong></td><td>Current default. Cold-start on first request; raw <code>run.app</code> URL only.</td></tr>
       </tbody>
     </table>
+    <div class="callout">
+      <strong>Default shape.</strong> <code>deploy-web.sh</code> now sets <code>--min-instances=0</code>. Override with <code>BI_MIN_INSTANCES=1 bash gcp/deploy-web.sh</code> when you have a customer demo lined up and want the service always-warm. Pair with <code>bash gcp/deploy-lb.sh</code> to bring the custom domain back in one command.
+    </div>
     <p class="sub" style="color:var(--ink-dim);font-size:14px;">Neon and Upstash live outside GCP; Neon is free on the hobby plan up to ~3 GB, Upstash free up to 256 MB. Both projects are well inside those limits.</p>
 
     <h3>Observability</h3>
@@ -906,7 +910,17 @@ done</code></pre>
       <figcaption>One anycast IP, six GCP resources, one DNS record. Google Front End terminates TLS and reverse-proxies to Cloud Run over its internal backbone.</figcaption>
     </figure>
 
-    <h3>Provisioning &mdash; seven <code>gcloud</code> commands</h3>
+    <h3>Scripted provisioning + teardown</h3>
+    <p>The repo ships <code>gcp/deploy-lb.sh</code> and <code>gcp/teardown-lb.sh</code> that run the sequence below in one shot. Both are idempotent.</p>
+    <pre><code># Bring up
+export GCP_PROJECT=nth-bi-stack
+export BI_DOMAIN=bi-superset.2nth.ai
+bash gcp/deploy-lb.sh   # prints the anycast IP at the end
+
+# Tear down
+bash gcp/teardown-lb.sh   # reverses the 7 resources</code></pre>
+
+    <h3>What the script does, step by step</h3>
     <pre><code>export PROJECT=nth-bi-stack
 export REGION=africa-south1
 export DOMAIN=bi-superset.2nth.ai

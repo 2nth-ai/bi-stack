@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # Deploy the Superset web tier (gunicorn, public).
+#
+# Scaling: defaults to min-0 for cost (cheaper when idle, ~20s cold-start on
+# first request). Set BI_MIN_INSTANCES=1 before deploy for a warm instance
+# when you have a demo lined up:
+#   BI_MIN_INSTANCES=1 bash gcp/deploy-web.sh
 source "$(dirname "$0")/config.sh"
+
+MIN_INSTANCES="${BI_MIN_INSTANCES:-0}"
 
 gcloud run deploy bi-superset-web \
   --project "${GCP_PROJECT}" \
@@ -11,7 +18,7 @@ gcloud run deploy bi-superset-web \
   --cpu 2 \
   --memory 2Gi \
   --concurrency 40 \
-  --min-instances 1 \
+  --min-instances "${MIN_INSTANCES}" \
   --max-instances 4 \
   --port 8088 \
   --timeout 300 \
