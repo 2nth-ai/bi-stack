@@ -34,6 +34,14 @@ SQLALCHEMY_ENGINE_OPTIONS = {
     "max_overflow": 10,
     "pool_pre_ping": True,
     "pool_recycle": 300,
+    # TCP keepalives keep Neon's proxy from dropping long-running transactions
+    # silently (observed: SSL SYSCALL EOF mid-`superset init`).
+    "connect_args": {
+        "keepalives": 1,
+        "keepalives_idle": 30,
+        "keepalives_interval": 10,
+        "keepalives_count": 5,
+    },
 }
 
 # ---------------------------------------------------------------------------
