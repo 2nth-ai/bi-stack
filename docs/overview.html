@@ -253,7 +253,7 @@
     <p>The repo ships with two fully modelled data domains so the same stack can be demoed against very different
       shapes of data:</p>
     <ul>
-      <li><strong>SAFEX commodity hedging</strong> &mdash; the original 2nth.ai domain: clients, contracts, futures prices, basis/margin math, hedge coverage. Schema: <code>analytics</code>.</li>
+      <li><strong>SAFEX commodity hedging</strong> &mdash; the original 2nth.ai domain: clients, contracts, futures prices, basis/margin math, hedge coverage. Schema: <code>analytics_analytics</code> (see the note on the dbt schema-concat quirk below).</li>
       <li><strong>Retail DC (Shoprite-style)</strong> &mdash; a large FMCG retailer&rsquo;s distribution-centre inventory: 8 DCs, 2,493 SKUs, 820 stores, 183k pallet positions, 553k movements. Schema: <code>analytics_retail_dc</code>.</li>
     </ul>
     <p>The retail-DC domain exists to demonstrate that the stack handles a broad product range and high-cardinality
@@ -331,7 +331,7 @@
         <rect class="box-accent" x="100" y="444" width="240" height="72" rx="4"/>
         <text class="label" x="220" y="466" text-anchor="middle">Neon Postgres</text>
         <text class="sub"   x="220" y="482" text-anchor="middle">eu-central-1 &mdash; production branch</text>
-        <text class="sub"   x="220" y="498" text-anchor="middle">superset_meta &middot; analytics &middot; analytics_retail_dc</text>
+        <text class="sub"   x="220" y="498" text-anchor="middle">superset_meta &middot; analytics_analytics &middot; analytics_retail_dc</text>
         <text class="sub"   x="220" y="510" text-anchor="middle">direct endpoint (Superset) + pooler (dbt)</text>
 
         <rect class="box" x="380" y="444" width="200" height="72" rx="4"/>
@@ -391,7 +391,7 @@
     <h3>Schema: <code>superset_meta</code></h3>
     <p>Standard Apache Superset tables &mdash; created by <code>superset db upgrade</code>. Holds users, roles, dashboards, charts, saved queries. About 50 tables, all managed by Superset itself.</p>
 
-    <h3>Schema: <code>analytics</code> (SAFEX domain)</h3>
+    <h3>Schema: <code>analytics_analytics</code> (SAFEX domain)</h3>
     <table>
       <thead><tr><th>Table</th><th>Kind</th><th class="num">Rows</th></tr></thead>
       <tbody>
@@ -403,6 +403,9 @@
         <tr><td><code>fct_hedge_coverage</code></td><td>dbt mart</td><td class="num">44</td></tr>
       </tbody>
     </table>
+    <div class="callout warn">
+      <strong>Schema-concat quirk.</strong> dbt-postgres&rsquo;s default <code>generate_schema_name</code> concatenates the profile&rsquo;s target schema with any model-level <code>+schema:</code> override, so <code>schema: analytics</code> plus <code>+schema: analytics</code> in <code>dbt_project.yml</code> produces <code>analytics_analytics</code> rather than plain <code>analytics</code>. Harmless but ugly. Fix in a follow-up: either drop the redundant <code>+schema: analytics</code> overrides, or add a <code>macros/generate_schema_name.sql</code> that returns the custom schema as-is.
+    </div>
 
     <h3>Schema: <code>analytics_retail_dc</code> (retail DC domain)</h3>
     <table>
