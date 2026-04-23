@@ -1,0 +1,47 @@
+name: bi_stack
+version: "0.1.0"
+config-version: 2
+
+profile: bi_stack
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  bi_stack:
+    +schema: analytics
+    staging:
+      +materialized: view
+      +schema: analytics
+    marts:
+      +materialized: table
+      +schema: analytics
+
+seeds:
+  bi_stack:
+    +schema: analytics
+    safex_prices:
+      +column_types:
+        trade_date: date
+        settlement_zar_per_ton: numeric(10, 2)
+    clients:
+      +column_types:
+        credit_limit_zar: numeric(14, 2)
+    feedlot_rations:
+      +column_types:
+        cost_per_ton_zar: numeric(10, 2)
+    contract_book:
+      +column_types:
+        tons: numeric(10, 2)
+        price_zar_per_ton: numeric(10, 2)
+        hedge_pct: numeric(5, 2)
+        delivery_date: date

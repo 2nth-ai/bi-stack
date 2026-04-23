@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_client
+    description: Client dimension enriched with contract rollups and credit utilisation.
+    columns:
+      - name: client_id
+        tests: [unique, not_null]
+
+  - name: fct_basis_margin
+    description: Mark-to-market margin per contract vs latest SAFEX settle.
+    columns:
+      - name: contract_id
+        tests: [unique, not_null]
+
+  - name: fct_hedge_coverage
+    description: Hedge coverage aggregated by client × commodity.
+
+  - name: fct_safex_daily
+    description: Daily SAFEX series with 7-day moving average and day-on-day delta.

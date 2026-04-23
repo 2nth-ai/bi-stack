@@ -1,0 +1,59 @@
+# Local dev stack — Superset against Neon dev branch.
+# Production runs on Cloud Run (see gcp/deploy-*.sh); this file is for laptops.
+#
+# Usage:
+#   cp .env.example .env   # fill in Neon dev branch URIs
+#   docker compose up --build
+#   open http://localhost:8088
+
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  superset-init:
+    build:
+      context: ./superset
+    image: bi-stack/superset:local
+    env_file: .env
+    depends_on:
+      redis:
+        condition: service_healthy
+    entrypoint: ["/app/bootstrap.sh"]
+    restart: "no"
+
+  superset-web:
+    image: bi-stack/superset:local
+    env_file: .env
+    depends_on:
+      superset-init:
+        condition: service_completed_successfully
+    ports:
+      - "8088:8088"
+    command: ["gunicorn", "--bind", "0.0.0.0:8088", "--workers", "2", "--timeout", "120", "--worker-class", "gthread", "--threads", "8", "superset.app:create_app()"]
+    restart: unless-stopped
+
+  superset-worker:
+    image: bi-stack/superset:local
+    env_file: .env
+    depends_on:
+      superset-init:
+        condition: service_completed_successfully
+    command: ["celery", "--app=superset.tasks.celery_app:app", "worker", "--loglevel=INFO", "--concurrency=2"]
+    restart: unless-stopped
+
+  superset-beat:
+    image: bi-stack/superset:local
+    env_file: .env
+    depends_on:
+      superset-init:
+        condition: service_completed_successfully
+    command: ["celery", "--app=superset.tasks.celery_app:app", "beat", "--loglevel=INFO"]
+    restart: unless-stopped

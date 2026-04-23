@@ -1,0 +1,57 @@
+name: deploy
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # required for Workload Identity Federation
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      GCP_PROJECT: ${{ vars.GCP_PROJECT }}
+      GCP_REGION: africa-south1
+      AR_REPO: bi-stack
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud (Workload Identity Federation)
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.WIF_PROVIDER }}
+          service_account: ${{ vars.WIF_SA }}
+
+      - name: Set up gcloud
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker auth for Artifact Registry
+        run: gcloud auth configure-docker ${GCP_REGION}-docker.pkg.dev --quiet
+
+      - name: Build & push Superset image
+        working-directory: superset
+        run: |
+          TAG=${GITHUB_REF_NAME:-latest}
+          IMG="${GCP_REGION}-docker.pkg.dev/${GCP_PROJECT}/${AR_REPO}/superset"
+          docker build -t "${IMG}:${TAG}" -t "${IMG}:latest" .
+          docker push "${IMG}:${TAG}"
+          docker push "${IMG}:latest"
+
+      - name: Build & push dbt image
+        working-directory: dbt
+        run: |
+          TAG=${GITHUB_REF_NAME:-latest}
+          IMG="${GCP_REGION}-docker.pkg.dev/${GCP_PROJECT}/${AR_REPO}/dbt"
+          docker build -t "${IMG}:${TAG}" -t "${IMG}:latest" .
+          docker push "${IMG}:${TAG}"
+          docker push "${IMG}:latest"
+
+      - name: Deploy Cloud Run services
+        run: |
+          ./gcp/deploy-web.sh
+          ./gcp/deploy-worker.sh
+          ./gcp/deploy-beat.sh
+          ./gcp/deploy-dbt-job.sh

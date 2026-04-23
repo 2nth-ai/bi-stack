@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_safex_prices
+    description: Daily SAFEX settlement prices by commodity and contract month.
+    columns:
+      - name: trade_date
+        description: Trade date (JSE business day).
+        tests: [not_null]
+      - name: commodity_code
+        description: SAFEX code — YMW, WMW, WEAT, SOYB, SUNS.
+        tests: [not_null]
+      - name: settlement_zar_per_ton
+        description: Settlement price in ZAR per metric ton.
+        tests: [not_null]
+
+  - name: stg_clients
+    description: SilverGro client master.
+    columns:
+      - name: client_id
+        tests: [unique, not_null]
+
+  - name: stg_contract_book
+    description: Forward contracts booked with clients.
+    columns:
+      - name: contract_id
+        tests: [unique, not_null]
+      - name: client_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_clients')
+              field: client_id

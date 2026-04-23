@@ -1,0 +1,29 @@
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/profiles.yml
+
+# Superset local state
+superset/superset_home/
+superset_db.sqlite
+
+# Editor
+.vscode/
+.idea/
+*.swp

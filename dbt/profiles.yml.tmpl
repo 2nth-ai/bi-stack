@@ -1,0 +1,29 @@
+# Copy this file to ~/.dbt/profiles.yml (or point DBT_PROFILES_DIR here)
+# and fill in the connection details. Uses the Neon pooled endpoint — dbt
+# connections are short-lived, so the pooler is fine.
+
+bi_stack:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: ep-xxxx-pooler.eu-central-1.aws.neon.tech
+      user: "{{ env_var('NEON_USER') }}"
+      password: "{{ env_var('NEON_PASSWORD') }}"
+      port: 5432
+      dbname: neondb
+      schema: analytics
+      threads: 4
+      sslmode: require
+      keepalives_idle: 0
+    prod:
+      type: postgres
+      host: ep-yyyy-pooler.eu-central-1.aws.neon.tech
+      user: "{{ env_var('NEON_USER') }}"
+      password: "{{ env_var('NEON_PASSWORD') }}"
+      port: 5432
+      dbname: neondb
+      schema: analytics
+      threads: 4
+      sslmode: require
+      keepalives_idle: 0

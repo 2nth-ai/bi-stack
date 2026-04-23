@@ -1,0 +1,6 @@
+# Extra Python deps baked into the Superset image.
+# Pinned to stable versions that match Superset 4.1.x wheels.
+psycopg2-binary==2.9.9
+redis==5.0.7
+flask-caching==2.3.0
+pyjwt==2.9.0

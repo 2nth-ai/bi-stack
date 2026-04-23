@@ -1,0 +1,62 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dbt and lint tools
+        run: |
+          pip install dbt-core==1.8.7 dbt-postgres==1.8.2 sqlfluff==3.2.5
+
+      - name: dbt compile (parse-only, no DB)
+        working-directory: dbt
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.github/ci
+        run: |
+          mkdir -p "$DBT_PROFILES_DIR"
+          cat > "$DBT_PROFILES_DIR/profiles.yml" <<EOF
+          bi_stack:
+            target: ci
+            outputs:
+              ci:
+                type: postgres
+                host: localhost
+                user: ci
+                password: ci
+                port: 5432
+                dbname: ci
+                schema: analytics
+                threads: 1
+          EOF
+          dbt deps
+          dbt parse --target ci
+
+      - name: sqlfluff lint
+        working-directory: dbt
+        run: sqlfluff lint --dialect postgres models/ || true
+
+      - name: Docker build (Superset image, no push)
+        uses: docker/build-push-action@v6
+        with:
+          context: ./superset
+          push: false
+          tags: bi-stack/superset:ci
+
+      - name: Docker build (dbt image, no push)
+        uses: docker/build-push-action@v6
+        with:
+          context: ./dbt
+          push: false
+          tags: bi-stack/dbt:ci

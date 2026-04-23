@@ -1,0 +1,21 @@
+client_id,name,segment,region,credit_limit_zar
+C001,Karan Beef,Feedlot,Gauteng,45000000.00
+C002,Beefcor,Feedlot,North West,28000000.00
+C003,Kanhym Estates,Feedlot,Mpumalanga,18000000.00
+C004,Chalmar Beef,Feedlot,Gauteng,12000000.00
+C005,Sparta Foods,Feedlot,Free State,22000000.00
+C006,Rainbow Chicken,Poultry,KwaZulu-Natal,35000000.00
+C007,Astral Foods,Poultry,Mpumalanga,40000000.00
+C008,Quantum Foods,Poultry,Western Cape,15000000.00
+C009,Country Bird,Poultry,North West,20000000.00
+C010,Sovereign Foods,Poultry,Eastern Cape,18000000.00
+C011,Clover Dairy,Dairy,Gauteng,25000000.00
+C012,Parmalat SA,Dairy,Western Cape,22000000.00
+C013,Woodlands Dairy,Dairy,Eastern Cape,14000000.00
+C014,Pioneer Foods Milling,Miller,Western Cape,32000000.00
+C015,Tiger Brands Milling,Miller,Gauteng,38000000.00
+C016,Premier Foods,Miller,KwaZulu-Natal,28000000.00
+C017,RCL Foods Milling,Miller,Gauteng,30000000.00
+C018,Kaap Agri,Miller,Western Cape,16000000.00
+C019,Afgri Milling,Miller,Gauteng,26000000.00
+C020,Senwes Milling,Miller,Free State,19000000.00
