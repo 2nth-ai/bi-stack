@@ -33,12 +33,15 @@ bi-stack/
 
 ## Local dev
 
-```bash
-cp .env.example .env
-# fill in Neon dev branch URIs (direct + pooled)
+Full clone-to-running-stack walkthrough: **[docs/quickstart.md](docs/quickstart.md)**.
 
+Short version:
+
+```bash
+./scripts/setup-env.sh               # derives .env from a Neon pooled URI
+# paste sql/neon-init.sql into Neon SQL Editor (one-time)
 docker compose up --build
-# http://localhost:8088 — login with ADMIN_USERNAME / ADMIN_PASSWORD from .env
+# http://localhost:8088 — login with admin / ADMIN_PASSWORD from .env
 ```
 
 Run dbt against the Neon dev branch:
