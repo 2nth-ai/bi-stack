@@ -1,0 +1,20 @@
+select
+    sku_id,
+    sku_code,
+    sku_name,
+    brand,
+    category_id,
+    subcategory_id,
+    supplier_id,
+    pack_size,
+    units_per_case,
+    cases_per_pallet,
+    pallet_weight_kg,
+    unit_price_zar,
+    case_price_zar,
+    shelf_life_days,
+    (requires_chilled = 'Y') as requires_chilled,
+    (requires_frozen = 'Y')  as requires_frozen,
+    (is_own_label = 'Y')     as is_own_label,
+    status
+from {{ ref('dim_sku') }}

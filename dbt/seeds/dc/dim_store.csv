@@ -1,0 +1,821 @@
+store_id,store_code,banner,store_name,province_code,province_name,city,primary_dc_id,trading_area_sqm,open_date,status
+1,STR00001,Shoprite,Shoprite Welkom #100,FS,Free State,Welkom,8,733,2004-01-01,OPEN
+2,STR00002,Shoprite,Shoprite Pietermaritzburg #101,KZN,KwaZulu-Natal,Pietermaritzburg,3,1449,2010-01-01,OPEN
+3,STR00003,Shoprite,Shoprite Pietermaritzburg #102,KZN,KwaZulu-Natal,Pietermaritzburg,3,1441,2010-01-01,OPEN
+4,STR00004,Shoprite,Shoprite Tzaneen #103,LP,Limpopo,Tzaneen,1,1593,2007-01-01,OPEN
+5,STR00005,Shoprite,Shoprite Thohoyandou #104,LP,Limpopo,Thohoyandou,1,1769,2006-01-01,OPEN
+6,STR00006,Shoprite,Shoprite Kempton Park #105,GP,Gauteng,Kempton Park,1,1260,2011-01-01,OPEN
+7,STR00007,Shoprite,Shoprite Midrand #106,GP,Gauteng,Midrand,6,1764,2001-01-01,OPEN
+8,STR00008,Shoprite,Shoprite Kimberley #107,NC,Northern Cape,Kimberley,4,737,2020-01-01,OPEN
+9,STR00009,Shoprite,Shoprite Welkom #108,FS,Free State,Welkom,8,1482,2025-01-01,OPEN
+10,STR00010,Shoprite,Shoprite Rustenburg #109,NW,North West,Rustenburg,1,1038,2012-01-01,OPEN
+11,STR00011,Shoprite,Shoprite Vereeniging #110,GP,Gauteng,Vereeniging,6,951,2001-01-01,OPEN
+12,STR00012,Shoprite,Shoprite Sandton #111,GP,Gauteng,Sandton,1,656,2018-01-01,OPEN
+13,STR00013,Shoprite,Shoprite Bloemfontein #112,FS,Free State,Bloemfontein,8,1717,2023-01-01,OPEN
+14,STR00014,Shoprite,Shoprite Boksburg #113,GP,Gauteng,Boksburg,6,1770,2014-01-01,OPEN
+15,STR00015,Shoprite,Shoprite Richards Bay #114,KZN,KwaZulu-Natal,Richards Bay,3,829,2000-01-01,OPEN
+16,STR00016,Shoprite,Shoprite Mahikeng #115,NW,North West,Mahikeng,1,1640,1998-01-01,OPEN
+17,STR00017,Shoprite,Shoprite Sasolburg #116,FS,Free State,Sasolburg,8,1417,2006-01-01,OPEN
+18,STR00018,Shoprite,Shoprite Paarl #117,WC,Western Cape,Paarl,4,846,2012-01-01,OPEN
+19,STR00019,Shoprite,Shoprite Tzaneen #118,LP,Limpopo,Tzaneen,1,1769,2012-01-01,OPEN
+20,STR00020,Shoprite,Shoprite Potchefstroom #119,NW,North West,Potchefstroom,8,623,2015-01-01,OPEN
+21,STR00021,Shoprite,Shoprite Centurion #120,GP,Gauteng,Centurion,1,1706,1999-01-01,OPEN
+22,STR00022,Shoprite,Shoprite Mossel Bay #121,WC,Western Cape,Mossel Bay,5,791,2024-01-01,OPEN
+23,STR00023,Shoprite,Shoprite Secunda #122,MP,Mpumalanga,Secunda,1,1753,2000-01-01,OPEN
+24,STR00024,Shoprite,Shoprite Bellville #123,WC,Western Cape,Bellville,5,772,2003-01-01,OPEN
+25,STR00025,Shoprite,Shoprite Amanzimtoti #124,KZN,KwaZulu-Natal,Amanzimtoti,3,938,2017-01-01,OPEN
+26,STR00026,Shoprite,Shoprite Uitenhage #125,EC,Eastern Cape,Uitenhage,7,1403,2016-01-01,OPEN
+27,STR00027,Shoprite,Shoprite Polokwane #126,LP,Limpopo,Polokwane,1,1147,1999-01-01,OPEN
+28,STR00028,Shoprite,Shoprite Pietermaritzburg #127,KZN,KwaZulu-Natal,Pietermaritzburg,2,1129,2023-01-01,OPEN
+29,STR00029,Shoprite,Shoprite Pretoria #128,GP,Gauteng,Pretoria,6,1326,2011-01-01,OPEN
+30,STR00030,Shoprite,Shoprite Sandton #129,GP,Gauteng,Sandton,1,1598,2007-01-01,OPEN
+31,STR00031,Shoprite,Shoprite Mthatha #130,EC,Eastern Cape,Mthatha,7,1372,2009-01-01,OPEN
+32,STR00032,Shoprite,Shoprite Midrand #131,GP,Gauteng,Midrand,6,1415,2003-01-01,OPEN
+33,STR00033,Shoprite,Shoprite Oudtshoorn #132,WC,Western Cape,Oudtshoorn,4,1463,2020-01-01,OPEN
+34,STR00034,Shoprite,Shoprite Empangeni #133,KZN,KwaZulu-Natal,Empangeni,3,1719,2005-01-01,OPEN
+35,STR00035,Shoprite,Shoprite Gqeberha #134,EC,Eastern Cape,Gqeberha,7,1144,2012-01-01,OPEN
+36,STR00036,Shoprite,Shoprite Pietermaritzburg #135,KZN,KwaZulu-Natal,Pietermaritzburg,2,1509,1998-01-01,OPEN
+37,STR00037,Shoprite,Shoprite Pretoria #136,GP,Gauteng,Pretoria,6,1390,2002-01-01,OPEN
+38,STR00038,Shoprite,Shoprite Midrand #137,GP,Gauteng,Midrand,6,1097,2024-01-01,OPEN
+39,STR00039,Shoprite,Shoprite Port Shepstone #138,KZN,KwaZulu-Natal,Port Shepstone,3,1719,2002-01-01,OPEN
+40,STR00040,Shoprite,Shoprite Centurion #139,GP,Gauteng,Centurion,1,1694,2010-01-01,OPEN
+41,STR00041,Shoprite,Shoprite Durban #140,KZN,KwaZulu-Natal,Durban,2,1492,2002-01-01,OPEN
+42,STR00042,Shoprite,Shoprite Potchefstroom #141,NW,North West,Potchefstroom,8,909,2022-01-01,OPEN
+43,STR00043,Shoprite,Shoprite Empangeni #142,KZN,KwaZulu-Natal,Empangeni,2,645,2017-01-01,OPEN
+44,STR00044,Shoprite,Shoprite Middelburg #143,MP,Mpumalanga,Middelburg,1,751,2004-01-01,OPEN
+45,STR00045,Shoprite,Shoprite Springbok #144,NC,Northern Cape,Springbok,8,1108,2009-01-01,OPEN
+46,STR00046,Shoprite,Shoprite East London #145,EC,Eastern Cape,East London,7,1434,2001-01-01,OPEN
+47,STR00047,Shoprite,Shoprite Alberton #146,GP,Gauteng,Alberton,6,1434,1998-01-01,OPEN
+48,STR00048,Shoprite,Shoprite Cape Town #147,WC,Western Cape,Cape Town,4,1121,2008-01-01,OPEN
+49,STR00049,Shoprite,Shoprite Empangeni #148,KZN,KwaZulu-Natal,Empangeni,2,1280,2022-01-01,OPEN
+50,STR00050,Shoprite,Shoprite Witbank #149,MP,Mpumalanga,Witbank,1,1337,2006-01-01,OPEN
+51,STR00051,Shoprite,Shoprite East London #150,EC,Eastern Cape,East London,7,1136,2001-01-01,OPEN
+52,STR00052,Shoprite,Shoprite Ladysmith #151,KZN,KwaZulu-Natal,Ladysmith,3,664,2025-01-01,OPEN
+53,STR00053,Shoprite,Shoprite Centurion #152,GP,Gauteng,Centurion,6,657,2023-01-01,OPEN
+54,STR00054,Shoprite,Shoprite Pietermaritzburg #153,KZN,KwaZulu-Natal,Pietermaritzburg,3,1562,2022-01-01,OPEN
+55,STR00055,Shoprite,Shoprite Grahamstown #154,EC,Eastern Cape,Grahamstown,7,859,2020-01-01,OPEN
+56,STR00056,Shoprite,Shoprite Vereeniging #155,GP,Gauteng,Vereeniging,1,1708,2021-01-01,OPEN
+57,STR00057,Shoprite,Shoprite Benoni #156,GP,Gauteng,Benoni,6,1728,2002-01-01,OPEN
+58,STR00058,Shoprite,Shoprite Benoni #157,GP,Gauteng,Benoni,1,1154,2011-01-01,OPEN
+59,STR00059,Shoprite,Shoprite Umhlanga #158,KZN,KwaZulu-Natal,Umhlanga,2,1268,2017-01-01,OPEN
+60,STR00060,Shoprite,Shoprite Boksburg #159,GP,Gauteng,Boksburg,6,1371,2006-01-01,OPEN
+61,STR00061,Shoprite,Shoprite Empangeni #160,KZN,KwaZulu-Natal,Empangeni,2,1725,2012-01-01,OPEN
+62,STR00062,Shoprite,Shoprite Oudtshoorn #161,WC,Western Cape,Oudtshoorn,5,1239,2020-01-01,OPEN
+63,STR00063,Shoprite,Shoprite Middelburg #162,MP,Mpumalanga,Middelburg,1,1296,2016-01-01,OPEN
+64,STR00064,Shoprite,Shoprite Kempton Park #163,GP,Gauteng,Kempton Park,6,700,2001-01-01,OPEN
+65,STR00065,Shoprite,Shoprite Alberton #164,GP,Gauteng,Alberton,1,969,1999-01-01,OPEN
+66,STR00066,Shoprite,Shoprite Middelburg #165,MP,Mpumalanga,Middelburg,6,1104,2020-01-01,OPEN
+67,STR00067,Shoprite,Shoprite Mokopane #166,LP,Limpopo,Mokopane,1,832,2000-01-01,OPEN
+68,STR00068,Shoprite,Shoprite Durban #167,KZN,KwaZulu-Natal,Durban,3,1065,2024-01-01,OPEN
+69,STR00069,Shoprite,Shoprite Umhlanga #168,KZN,KwaZulu-Natal,Umhlanga,3,1462,2008-01-01,OPEN
+70,STR00070,Shoprite,Shoprite Pretoria #169,GP,Gauteng,Pretoria,1,1654,2016-01-01,OPEN
+71,STR00071,Shoprite,Shoprite Midrand #170,GP,Gauteng,Midrand,6,714,2010-01-01,OPEN
+72,STR00072,Shoprite,Shoprite Durban #171,KZN,KwaZulu-Natal,Durban,2,1772,2007-01-01,OPEN
+73,STR00073,Shoprite,Shoprite Sasolburg #172,FS,Free State,Sasolburg,8,1788,2006-01-01,OPEN
+74,STR00074,Shoprite,Shoprite Roodepoort #173,GP,Gauteng,Roodepoort,6,1368,2019-01-01,OPEN
+75,STR00075,Shoprite,Shoprite Secunda #174,MP,Mpumalanga,Secunda,6,1618,2011-01-01,OPEN
+76,STR00076,Shoprite,Shoprite Centurion #175,GP,Gauteng,Centurion,6,931,1998-01-01,OPEN
+77,STR00077,Shoprite,Shoprite Kroonstad #176,FS,Free State,Kroonstad,8,1467,2025-01-01,OPEN
+78,STR00078,Shoprite,Shoprite George #177,WC,Western Cape,George,5,1700,1998-01-01,OPEN
+79,STR00079,Shoprite,Shoprite Ladysmith #178,KZN,KwaZulu-Natal,Ladysmith,3,1052,2004-01-01,OPEN
+80,STR00080,Shoprite,Shoprite Bethlehem #179,FS,Free State,Bethlehem,8,867,2005-01-01,OPEN
+81,STR00081,Shoprite,Shoprite Middelburg #180,MP,Mpumalanga,Middelburg,6,1428,2010-01-01,OPEN
+82,STR00082,Shoprite,Shoprite Bethlehem #181,FS,Free State,Bethlehem,8,1289,2020-01-01,OPEN
+83,STR00083,Shoprite,Shoprite Knysna #182,WC,Western Cape,Knysna,4,1284,2017-01-01,OPEN
+84,STR00084,Shoprite,Shoprite Durban #183,KZN,KwaZulu-Natal,Durban,2,618,2020-01-01,OPEN
+85,STR00085,Shoprite,Shoprite Tzaneen #184,LP,Limpopo,Tzaneen,1,982,2001-01-01,OPEN
+86,STR00086,Shoprite,Shoprite Sandton #185,GP,Gauteng,Sandton,6,1525,2011-01-01,OPEN
+87,STR00087,Shoprite,Shoprite Potchefstroom #186,NW,North West,Potchefstroom,8,1236,2010-01-01,OPEN
+88,STR00088,Shoprite,Shoprite Midrand #187,GP,Gauteng,Midrand,6,737,2010-01-01,OPEN
+89,STR00089,Shoprite,Shoprite Sandton #188,GP,Gauteng,Sandton,1,1175,2020-01-01,OPEN
+90,STR00090,Shoprite,Shoprite Mahikeng #189,NW,North West,Mahikeng,1,1630,2024-01-01,OPEN
+91,STR00091,Shoprite,Shoprite Polokwane #190,LP,Limpopo,Polokwane,1,612,2022-01-01,OPEN
+92,STR00092,Shoprite,Shoprite Nelspruit #191,MP,Mpumalanga,Nelspruit,1,1571,2016-01-01,OPEN
+93,STR00093,Shoprite,Shoprite Newcastle #192,KZN,KwaZulu-Natal,Newcastle,3,1612,2015-01-01,OPEN
+94,STR00094,Shoprite,Shoprite Sandton #193,GP,Gauteng,Sandton,1,1783,2017-01-01,OPEN
+95,STR00095,Shoprite,Shoprite Secunda #194,MP,Mpumalanga,Secunda,6,627,2023-01-01,OPEN
+96,STR00096,Shoprite,Shoprite Alberton #195,GP,Gauteng,Alberton,1,1436,2023-01-01,OPEN
+97,STR00097,Shoprite,Shoprite Boksburg #196,GP,Gauteng,Boksburg,1,1470,2000-01-01,OPEN
+98,STR00098,Shoprite,Shoprite Sandton #197,GP,Gauteng,Sandton,1,709,2004-01-01,OPEN
+99,STR00099,Shoprite,Shoprite Newcastle #198,KZN,KwaZulu-Natal,Newcastle,2,1300,2005-01-01,OPEN
+100,STR00100,Shoprite,Shoprite Hermanus #199,WC,Western Cape,Hermanus,5,698,2012-01-01,OPEN
+101,STR00101,Shoprite,Shoprite Ladysmith #200,KZN,KwaZulu-Natal,Ladysmith,2,1142,2014-01-01,OPEN
+102,STR00102,Shoprite,Shoprite Pretoria #201,GP,Gauteng,Pretoria,1,1741,2020-01-01,OPEN
+103,STR00103,Shoprite,Shoprite Mthatha #202,EC,Eastern Cape,Mthatha,7,1341,2023-01-01,OPEN
+104,STR00104,Shoprite,Shoprite Gqeberha #203,EC,Eastern Cape,Gqeberha,7,664,2019-01-01,OPEN
+105,STR00105,Shoprite,Shoprite Mokopane #204,LP,Limpopo,Mokopane,1,1352,2007-01-01,OPEN
+106,STR00106,Shoprite,Shoprite Queenstown #205,EC,Eastern Cape,Queenstown,7,898,2025-01-01,OPEN
+107,STR00107,Shoprite,Shoprite Pretoria #206,GP,Gauteng,Pretoria,1,886,2004-01-01,OPEN
+108,STR00108,Shoprite,Shoprite Centurion #207,GP,Gauteng,Centurion,6,1700,2017-01-01,OPEN
+109,STR00109,Shoprite,Shoprite Sasolburg #208,FS,Free State,Sasolburg,8,773,2012-01-01,OPEN
+110,STR00110,Shoprite,Shoprite Stellenbosch #209,WC,Western Cape,Stellenbosch,5,1097,2019-01-01,OPEN
+111,STR00111,Shoprite,Shoprite Mossel Bay #210,WC,Western Cape,Mossel Bay,4,947,1998-01-01,OPEN
+112,STR00112,Shoprite,Shoprite Boksburg #211,GP,Gauteng,Boksburg,6,947,2024-01-01,OPEN
+113,STR00113,Shoprite,Shoprite Randburg #212,GP,Gauteng,Randburg,6,625,2018-01-01,OPEN
+114,STR00114,Shoprite,Shoprite Empangeni #213,KZN,KwaZulu-Natal,Empangeni,2,1105,2024-01-01,OPEN
+115,STR00115,Shoprite,Shoprite Alberton #214,GP,Gauteng,Alberton,6,998,1999-01-01,OPEN
+116,STR00116,Shoprite,Shoprite George #215,WC,Western Cape,George,4,1716,2014-01-01,OPEN
+117,STR00117,Shoprite,Shoprite Sasolburg #216,FS,Free State,Sasolburg,8,1069,2008-01-01,OPEN
+118,STR00118,Shoprite,Shoprite Nelspruit #217,MP,Mpumalanga,Nelspruit,6,673,2025-01-01,OPEN
+119,STR00119,Shoprite,Shoprite Polokwane #218,LP,Limpopo,Polokwane,1,1411,2012-01-01,OPEN
+120,STR00120,Shoprite,Shoprite Port Shepstone #219,KZN,KwaZulu-Natal,Port Shepstone,3,737,2024-01-01,OPEN
+121,STR00121,Shoprite,Shoprite Worcester #220,WC,Western Cape,Worcester,4,1120,2006-01-01,OPEN
+122,STR00122,Shoprite,Shoprite Mokopane #221,LP,Limpopo,Mokopane,1,1136,2011-01-01,OPEN
+123,STR00123,Shoprite,Shoprite Vereeniging #222,GP,Gauteng,Vereeniging,1,1340,2020-01-01,OPEN
+124,STR00124,Shoprite,Shoprite Benoni #223,GP,Gauteng,Benoni,1,1731,2001-01-01,OPEN
+125,STR00125,Shoprite,Shoprite Soweto #224,GP,Gauteng,Soweto,6,852,2002-01-01,OPEN
+126,STR00126,Shoprite,Shoprite Port Shepstone #225,KZN,KwaZulu-Natal,Port Shepstone,3,1390,2023-01-01,OPEN
+127,STR00127,Shoprite,Shoprite Port Shepstone #226,KZN,KwaZulu-Natal,Port Shepstone,3,1653,2022-01-01,OPEN
+128,STR00128,Shoprite,Shoprite Centurion #227,GP,Gauteng,Centurion,1,1244,2013-01-01,OPEN
+129,STR00129,Shoprite,Shoprite Newcastle #228,KZN,KwaZulu-Natal,Newcastle,2,814,2006-01-01,OPEN
+130,STR00130,Shoprite,Shoprite Middelburg #229,MP,Mpumalanga,Middelburg,1,1371,2005-01-01,OPEN
+131,STR00131,Shoprite,Shoprite Alberton #230,GP,Gauteng,Alberton,1,1706,2021-01-01,OPEN
+132,STR00132,Shoprite,Shoprite Klerksdorp #231,NW,North West,Klerksdorp,8,1148,2002-01-01,OPEN
+133,STR00133,Shoprite,Shoprite Ermelo #232,MP,Mpumalanga,Ermelo,1,1520,2003-01-01,OPEN
+134,STR00134,Shoprite,Shoprite Pietermaritzburg #233,KZN,KwaZulu-Natal,Pietermaritzburg,2,909,2001-01-01,OPEN
+135,STR00135,Shoprite,Shoprite Rustenburg #234,NW,North West,Rustenburg,8,1402,2024-01-01,OPEN
+136,STR00136,Shoprite,Shoprite Sandton #235,GP,Gauteng,Sandton,1,1658,2025-01-01,OPEN
+137,STR00137,Shoprite,Shoprite Port Shepstone #236,KZN,KwaZulu-Natal,Port Shepstone,2,1034,2003-01-01,OPEN
+138,STR00138,Shoprite,Shoprite Pretoria #237,GP,Gauteng,Pretoria,1,630,2003-01-01,OPEN
+139,STR00139,Shoprite,Shoprite Johannesburg #238,GP,Gauteng,Johannesburg,1,729,2020-01-01,OPEN
+140,STR00140,Shoprite,Shoprite Empangeni #239,KZN,KwaZulu-Natal,Empangeni,3,1377,2001-01-01,OPEN
+141,STR00141,Shoprite,Shoprite Vereeniging #240,GP,Gauteng,Vereeniging,1,1743,2023-01-01,OPEN
+142,STR00142,Shoprite,Shoprite Gqeberha #241,EC,Eastern Cape,Gqeberha,7,622,2015-01-01,OPEN
+143,STR00143,Shoprite,Shoprite Soweto #242,GP,Gauteng,Soweto,6,1363,2010-01-01,OPEN
+144,STR00144,Shoprite,Shoprite Bloemfontein #243,FS,Free State,Bloemfontein,8,1081,2015-01-01,OPEN
+145,STR00145,Shoprite,Shoprite Somerset West #244,WC,Western Cape,Somerset West,5,1099,2018-01-01,OPEN
+146,STR00146,Shoprite,Shoprite Thohoyandou #245,LP,Limpopo,Thohoyandou,1,1165,2011-01-01,OPEN
+147,STR00147,Shoprite,Shoprite Welkom #246,FS,Free State,Welkom,8,1244,2007-01-01,OPEN
+148,STR00148,Shoprite,Shoprite Somerset West #247,WC,Western Cape,Somerset West,5,800,1999-01-01,OPEN
+149,STR00149,Shoprite,Shoprite Benoni #248,GP,Gauteng,Benoni,1,1427,2003-01-01,OPEN
+150,STR00150,Shoprite,Shoprite Randburg #249,GP,Gauteng,Randburg,6,1376,2012-01-01,OPEN
+151,STR00151,Shoprite,Shoprite Nelspruit #250,MP,Mpumalanga,Nelspruit,6,694,2011-01-01,OPEN
+152,STR00152,Shoprite,Shoprite Knysna #251,WC,Western Cape,Knysna,5,1150,2000-01-01,OPEN
+153,STR00153,Shoprite,Shoprite Randburg #252,GP,Gauteng,Randburg,6,1212,2025-01-01,OPEN
+154,STR00154,Shoprite,Shoprite Alberton #253,GP,Gauteng,Alberton,1,1060,2007-01-01,OPEN
+155,STR00155,Shoprite,Shoprite Vereeniging #254,GP,Gauteng,Vereeniging,6,1263,2001-01-01,OPEN
+156,STR00156,Shoprite,Shoprite Oudtshoorn #255,WC,Western Cape,Oudtshoorn,5,1561,1999-01-01,OPEN
+157,STR00157,Shoprite,Shoprite Ladysmith #256,KZN,KwaZulu-Natal,Ladysmith,2,1750,2022-01-01,OPEN
+158,STR00158,Shoprite,Shoprite Vereeniging #257,GP,Gauteng,Vereeniging,6,1014,2007-01-01,OPEN
+159,STR00159,Shoprite,Shoprite Port Shepstone #258,KZN,KwaZulu-Natal,Port Shepstone,3,1762,2016-01-01,OPEN
+160,STR00160,Shoprite,Shoprite Empangeni #259,KZN,KwaZulu-Natal,Empangeni,2,1540,2023-01-01,OPEN
+161,STR00161,Shoprite,Shoprite Vereeniging #260,GP,Gauteng,Vereeniging,1,1487,2015-01-01,OPEN
+162,STR00162,Shoprite,Shoprite Newcastle #261,KZN,KwaZulu-Natal,Newcastle,2,1683,2019-01-01,OPEN
+163,STR00163,Shoprite,Shoprite Grahamstown #262,EC,Eastern Cape,Grahamstown,7,748,2009-01-01,OPEN
+164,STR00164,Shoprite,Shoprite Sandton #263,GP,Gauteng,Sandton,6,1343,2012-01-01,OPEN
+165,STR00165,Shoprite,Shoprite Secunda #264,MP,Mpumalanga,Secunda,6,647,2020-01-01,OPEN
+166,STR00166,Shoprite,Shoprite Durban #265,KZN,KwaZulu-Natal,Durban,2,778,2002-01-01,OPEN
+167,STR00167,Shoprite,Shoprite Mossel Bay #266,WC,Western Cape,Mossel Bay,5,1669,2016-01-01,OPEN
+168,STR00168,Shoprite,Shoprite Empangeni #267,KZN,KwaZulu-Natal,Empangeni,2,630,2007-01-01,OPEN
+169,STR00169,Shoprite,Shoprite Mahikeng #268,NW,North West,Mahikeng,1,885,2000-01-01,OPEN
+170,STR00170,Shoprite,Shoprite Kroonstad #269,FS,Free State,Kroonstad,8,1645,2008-01-01,OPEN
+171,STR00171,Shoprite,Shoprite Potchefstroom #270,NW,North West,Potchefstroom,1,1596,2012-01-01,OPEN
+172,STR00172,Shoprite,Shoprite Somerset West #271,WC,Western Cape,Somerset West,4,882,2013-01-01,OPEN
+173,STR00173,Shoprite,Shoprite Bellville #272,WC,Western Cape,Bellville,4,797,2015-01-01,OPEN
+174,STR00174,Shoprite,Shoprite Mthatha #273,EC,Eastern Cape,Mthatha,7,788,2017-01-01,OPEN
+175,STR00175,Shoprite,Shoprite East London #274,EC,Eastern Cape,East London,7,1492,2006-01-01,OPEN
+176,STR00176,Shoprite,Shoprite Midrand #275,GP,Gauteng,Midrand,1,1577,2008-01-01,OPEN
+177,STR00177,Shoprite,Shoprite Newcastle #276,KZN,KwaZulu-Natal,Newcastle,2,709,2023-01-01,OPEN
+178,STR00178,Shoprite,Shoprite Queenstown #277,EC,Eastern Cape,Queenstown,7,1350,2006-01-01,OPEN
+179,STR00179,Shoprite,Shoprite Mokopane #278,LP,Limpopo,Mokopane,1,1201,2009-01-01,OPEN
+180,STR00180,Shoprite,Shoprite Ladysmith #279,KZN,KwaZulu-Natal,Ladysmith,2,1491,2022-01-01,OPEN
+181,STR00181,Shoprite,Shoprite Richards Bay #280,KZN,KwaZulu-Natal,Richards Bay,2,858,2025-01-01,OPEN
+182,STR00182,Shoprite,Shoprite Nelspruit #281,MP,Mpumalanga,Nelspruit,6,1776,1998-01-01,OPEN
+183,STR00183,Shoprite,Shoprite Polokwane #282,LP,Limpopo,Polokwane,1,1417,2005-01-01,OPEN
+184,STR00184,Shoprite,Shoprite Thohoyandou #283,LP,Limpopo,Thohoyandou,1,1163,1999-01-01,OPEN
+185,STR00185,Shoprite,Shoprite Paarl #284,WC,Western Cape,Paarl,4,1170,2025-01-01,OPEN
+186,STR00186,Shoprite,Shoprite Ermelo #285,MP,Mpumalanga,Ermelo,1,933,2015-01-01,OPEN
+187,STR00187,Shoprite,Shoprite Durban #286,KZN,KwaZulu-Natal,Durban,3,719,2000-01-01,OPEN
+188,STR00188,Shoprite,Shoprite Richards Bay #287,KZN,KwaZulu-Natal,Richards Bay,2,1136,2020-01-01,OPEN
+189,STR00189,Shoprite,Shoprite Paarl #288,WC,Western Cape,Paarl,4,1459,2000-01-01,OPEN
+190,STR00190,Shoprite,Shoprite Cape Town #289,WC,Western Cape,Cape Town,5,1586,2000-01-01,OPEN
+191,STR00191,Shoprite,Shoprite Vereeniging #290,GP,Gauteng,Vereeniging,6,720,2000-01-01,OPEN
+192,STR00192,Shoprite,Shoprite Johannesburg #291,GP,Gauteng,Johannesburg,6,964,2025-01-01,OPEN
+193,STR00193,Shoprite,Shoprite Pietermaritzburg #292,KZN,KwaZulu-Natal,Pietermaritzburg,2,1245,2003-01-01,OPEN
+194,STR00194,Shoprite,Shoprite George #293,WC,Western Cape,George,4,1065,2024-01-01,OPEN
+195,STR00195,Shoprite,Shoprite Nelspruit #294,MP,Mpumalanga,Nelspruit,6,1766,2002-01-01,OPEN
+196,STR00196,Shoprite,Shoprite Benoni #295,GP,Gauteng,Benoni,1,745,2023-01-01,OPEN
+197,STR00197,Shoprite,Shoprite Somerset West #296,WC,Western Cape,Somerset West,5,630,1998-01-01,OPEN
+198,STR00198,Shoprite,Shoprite Polokwane #297,LP,Limpopo,Polokwane,1,1632,2016-01-01,OPEN
+199,STR00199,Shoprite,Shoprite Kroonstad #298,FS,Free State,Kroonstad,8,1064,2023-01-01,OPEN
+200,STR00200,Shoprite,Shoprite Empangeni #299,KZN,KwaZulu-Natal,Empangeni,3,1737,2016-01-01,OPEN
+201,STR00201,Shoprite,Shoprite Randburg #300,GP,Gauteng,Randburg,6,869,2017-01-01,OPEN
+202,STR00202,Shoprite,Shoprite Kempton Park #301,GP,Gauteng,Kempton Park,6,836,2011-01-01,OPEN
+203,STR00203,Shoprite,Shoprite Ermelo #302,MP,Mpumalanga,Ermelo,1,1654,2002-01-01,OPEN
+204,STR00204,Shoprite,Shoprite Mahikeng #303,NW,North West,Mahikeng,1,1702,2000-01-01,OPEN
+205,STR00205,Shoprite,Shoprite Johannesburg #304,GP,Gauteng,Johannesburg,1,1128,2008-01-01,OPEN
+206,STR00206,Shoprite,Shoprite Kempton Park #305,GP,Gauteng,Kempton Park,6,1749,2019-01-01,OPEN
+207,STR00207,Shoprite,Shoprite Richards Bay #306,KZN,KwaZulu-Natal,Richards Bay,2,740,2012-01-01,OPEN
+208,STR00208,Shoprite,Shoprite Middelburg #307,MP,Mpumalanga,Middelburg,1,1496,2006-01-01,OPEN
+209,STR00209,Shoprite,Shoprite Ladysmith #308,KZN,KwaZulu-Natal,Ladysmith,2,910,2011-01-01,OPEN
+210,STR00210,Shoprite,Shoprite Amanzimtoti #309,KZN,KwaZulu-Natal,Amanzimtoti,3,1717,2011-01-01,OPEN
+211,STR00211,Shoprite,Shoprite Benoni #310,GP,Gauteng,Benoni,6,996,2016-01-01,OPEN
+212,STR00212,Shoprite,Shoprite Amanzimtoti #311,KZN,KwaZulu-Natal,Amanzimtoti,3,1709,2014-01-01,OPEN
+213,STR00213,Shoprite,Shoprite Sandton #312,GP,Gauteng,Sandton,6,1251,2023-01-01,OPEN
+214,STR00214,Shoprite,Shoprite Roodepoort #313,GP,Gauteng,Roodepoort,6,882,2015-01-01,OPEN
+215,STR00215,Shoprite,Shoprite Johannesburg #314,GP,Gauteng,Johannesburg,6,1512,2024-01-01,OPEN
+216,STR00216,Shoprite,Shoprite Cape Town #315,WC,Western Cape,Cape Town,5,1405,2009-01-01,OPEN
+217,STR00217,Shoprite,Shoprite George #316,WC,Western Cape,George,5,763,2009-01-01,OPEN
+218,STR00218,Shoprite,Shoprite Klerksdorp #317,NW,North West,Klerksdorp,1,1756,2003-01-01,OPEN
+219,STR00219,Shoprite,Shoprite Grahamstown #318,EC,Eastern Cape,Grahamstown,7,669,2015-01-01,OPEN
+220,STR00220,Shoprite,Shoprite Polokwane #319,LP,Limpopo,Polokwane,1,687,2013-01-01,OPEN
+221,STR00221,Shoprite,Shoprite Durban #320,KZN,KwaZulu-Natal,Durban,3,808,2005-01-01,OPEN
+222,STR00222,Shoprite,Shoprite Pretoria #321,GP,Gauteng,Pretoria,1,1547,2022-01-01,OPEN
+223,STR00223,Shoprite,Shoprite Pietermaritzburg #322,KZN,KwaZulu-Natal,Pietermaritzburg,3,639,2002-01-01,OPEN
+224,STR00224,Shoprite,Shoprite Mossel Bay #323,WC,Western Cape,Mossel Bay,5,1396,1999-01-01,OPEN
+225,STR00225,Shoprite,Shoprite East London #324,EC,Eastern Cape,East London,7,648,2010-01-01,OPEN
+226,STR00226,Shoprite,Shoprite East London #325,EC,Eastern Cape,East London,7,1245,2024-01-01,OPEN
+227,STR00227,Shoprite,Shoprite Polokwane #326,LP,Limpopo,Polokwane,1,962,1998-01-01,OPEN
+228,STR00228,Shoprite,Shoprite Witbank #327,MP,Mpumalanga,Witbank,1,1496,2008-01-01,OPEN
+229,STR00229,Shoprite,Shoprite Bloemfontein #328,FS,Free State,Bloemfontein,8,621,2003-01-01,OPEN
+230,STR00230,Shoprite,Shoprite Nelspruit #329,MP,Mpumalanga,Nelspruit,1,1254,2001-01-01,OPEN
+231,STR00231,Shoprite,Shoprite George #330,WC,Western Cape,George,4,1131,2012-01-01,OPEN
+232,STR00232,Shoprite,Shoprite Durban #331,KZN,KwaZulu-Natal,Durban,3,1497,2007-01-01,OPEN
+233,STR00233,Shoprite,Shoprite Pretoria #332,GP,Gauteng,Pretoria,6,1507,2020-01-01,OPEN
+234,STR00234,Shoprite,Shoprite Benoni #333,GP,Gauteng,Benoni,1,1727,1999-01-01,OPEN
+235,STR00235,Shoprite,Shoprite Polokwane #334,LP,Limpopo,Polokwane,1,1072,2019-01-01,OPEN
+236,STR00236,Shoprite,Shoprite Gqeberha #335,EC,Eastern Cape,Gqeberha,7,619,2010-01-01,OPEN
+237,STR00237,Shoprite,Shoprite Worcester #336,WC,Western Cape,Worcester,4,624,2004-01-01,OPEN
+238,STR00238,Shoprite,Shoprite Gqeberha #337,EC,Eastern Cape,Gqeberha,7,1168,2009-01-01,OPEN
+239,STR00239,Shoprite,Shoprite Soweto #338,GP,Gauteng,Soweto,1,1477,1999-01-01,OPEN
+240,STR00240,Shoprite,Shoprite Pietermaritzburg #339,KZN,KwaZulu-Natal,Pietermaritzburg,3,747,2015-01-01,OPEN
+241,STR00241,Shoprite,Shoprite Stellenbosch #340,WC,Western Cape,Stellenbosch,4,1289,2017-01-01,OPEN
+242,STR00242,Shoprite,Shoprite Port Shepstone #341,KZN,KwaZulu-Natal,Port Shepstone,2,1335,2009-01-01,OPEN
+243,STR00243,Shoprite,Shoprite Mthatha #342,EC,Eastern Cape,Mthatha,7,1761,2008-01-01,OPEN
+244,STR00244,Shoprite,Shoprite Roodepoort #343,GP,Gauteng,Roodepoort,6,744,1999-01-01,OPEN
+245,STR00245,Shoprite,Shoprite Midrand #344,GP,Gauteng,Midrand,6,1782,1998-01-01,OPEN
+246,STR00246,Shoprite,Shoprite Empangeni #345,KZN,KwaZulu-Natal,Empangeni,3,1721,1999-01-01,OPEN
+247,STR00247,Shoprite,Shoprite Alberton #346,GP,Gauteng,Alberton,6,1499,2013-01-01,OPEN
+248,STR00248,Shoprite,Shoprite Benoni #347,GP,Gauteng,Benoni,1,1625,2006-01-01,OPEN
+249,STR00249,Shoprite,Shoprite Queenstown #348,EC,Eastern Cape,Queenstown,7,1046,2019-01-01,OPEN
+250,STR00250,Shoprite,Shoprite Centurion #349,GP,Gauteng,Centurion,6,1789,2020-01-01,OPEN
+251,STR00251,Shoprite,Shoprite Klerksdorp #350,NW,North West,Klerksdorp,8,642,1998-01-01,OPEN
+252,STR00252,Shoprite,Shoprite Knysna #351,WC,Western Cape,Knysna,5,921,2008-01-01,OPEN
+253,STR00253,Shoprite,Shoprite Paarl #352,WC,Western Cape,Paarl,4,1312,2024-01-01,OPEN
+254,STR00254,Shoprite,Shoprite Soweto #353,GP,Gauteng,Soweto,6,1377,2008-01-01,OPEN
+255,STR00255,Shoprite,Shoprite Sandton #354,GP,Gauteng,Sandton,6,1185,2001-01-01,OPEN
+256,STR00256,Shoprite,Shoprite Paarl #355,WC,Western Cape,Paarl,5,1792,1999-01-01,OPEN
+257,STR00257,Shoprite,Shoprite Umhlanga #356,KZN,KwaZulu-Natal,Umhlanga,2,1053,2007-01-01,OPEN
+258,STR00258,Shoprite,Shoprite Bellville #357,WC,Western Cape,Bellville,4,631,2021-01-01,OPEN
+259,STR00259,Shoprite,Shoprite Bethlehem #358,FS,Free State,Bethlehem,8,695,2009-01-01,OPEN
+260,STR00260,Shoprite,Shoprite Vereeniging #359,GP,Gauteng,Vereeniging,6,1118,2005-01-01,OPEN
+261,STR00261,Shoprite,Shoprite Pretoria #360,GP,Gauteng,Pretoria,1,1386,2010-01-01,OPEN
+262,STR00262,Shoprite,Shoprite Oudtshoorn #361,WC,Western Cape,Oudtshoorn,4,613,2007-01-01,OPEN
+263,STR00263,Shoprite,Shoprite Secunda #362,MP,Mpumalanga,Secunda,6,1284,2022-01-01,OPEN
+264,STR00264,Shoprite,Shoprite Middelburg #363,MP,Mpumalanga,Middelburg,6,1758,2025-01-01,OPEN
+265,STR00265,Shoprite,Shoprite Midrand #364,GP,Gauteng,Midrand,1,1467,2007-01-01,OPEN
+266,STR00266,Shoprite,Shoprite Soweto #365,GP,Gauteng,Soweto,1,1092,2011-01-01,OPEN
+267,STR00267,Shoprite,Shoprite Gqeberha #366,EC,Eastern Cape,Gqeberha,7,889,2012-01-01,OPEN
+268,STR00268,Shoprite,Shoprite Bellville #367,WC,Western Cape,Bellville,4,1123,2012-01-01,OPEN
+269,STR00269,Shoprite,Shoprite Klerksdorp #368,NW,North West,Klerksdorp,1,602,2012-01-01,OPEN
+270,STR00270,Shoprite,Shoprite Sandton #369,GP,Gauteng,Sandton,6,1062,2020-01-01,OPEN
+271,STR00271,Shoprite,Shoprite East London #370,EC,Eastern Cape,East London,7,987,2011-01-01,OPEN
+272,STR00272,Shoprite,Shoprite Gqeberha #371,EC,Eastern Cape,Gqeberha,7,950,2000-01-01,OPEN
+273,STR00273,Shoprite,Shoprite Hermanus #372,WC,Western Cape,Hermanus,4,1773,2013-01-01,OPEN
+274,STR00274,Shoprite,Shoprite Grahamstown #373,EC,Eastern Cape,Grahamstown,7,793,2011-01-01,OPEN
+275,STR00275,Shoprite,Shoprite Vereeniging #374,GP,Gauteng,Vereeniging,1,1494,2004-01-01,OPEN
+276,STR00276,Shoprite,Shoprite Port Shepstone #375,KZN,KwaZulu-Natal,Port Shepstone,3,1727,2000-01-01,OPEN
+277,STR00277,Shoprite,Shoprite Grahamstown #376,EC,Eastern Cape,Grahamstown,7,1549,2020-01-01,OPEN
+278,STR00278,Shoprite,Shoprite Rustenburg #377,NW,North West,Rustenburg,1,1381,2015-01-01,OPEN
+279,STR00279,Shoprite,Shoprite Ladysmith #378,KZN,KwaZulu-Natal,Ladysmith,2,1084,2013-01-01,OPEN
+280,STR00280,Shoprite,Shoprite Pietermaritzburg #379,KZN,KwaZulu-Natal,Pietermaritzburg,2,1721,2010-01-01,OPEN
+281,STR00281,Shoprite,Shoprite Port Shepstone #380,KZN,KwaZulu-Natal,Port Shepstone,2,1791,2013-01-01,OPEN
+282,STR00282,Shoprite,Shoprite Middelburg #381,MP,Mpumalanga,Middelburg,6,1236,2025-01-01,OPEN
+283,STR00283,Shoprite,Shoprite Vereeniging #382,GP,Gauteng,Vereeniging,1,882,2003-01-01,OPEN
+284,STR00284,Shoprite,Shoprite East London #383,EC,Eastern Cape,East London,7,602,1999-01-01,OPEN
+285,STR00285,Shoprite,Shoprite Midrand #384,GP,Gauteng,Midrand,1,1203,2015-01-01,OPEN
+286,STR00286,Shoprite,Shoprite Sandton #385,GP,Gauteng,Sandton,1,918,1999-01-01,OPEN
+287,STR00287,Shoprite,Shoprite Centurion #386,GP,Gauteng,Centurion,6,1597,2006-01-01,OPEN
+288,STR00288,Shoprite,Shoprite Queenstown #387,EC,Eastern Cape,Queenstown,7,1674,2021-01-01,OPEN
+289,STR00289,Shoprite,Shoprite Randburg #388,GP,Gauteng,Randburg,6,1782,2017-01-01,OPEN
+290,STR00290,Shoprite,Shoprite Queenstown #389,EC,Eastern Cape,Queenstown,7,859,2021-01-01,OPEN
+291,STR00291,Shoprite,Shoprite Richards Bay #390,KZN,KwaZulu-Natal,Richards Bay,2,673,2018-01-01,OPEN
+292,STR00292,Shoprite,Shoprite Centurion #391,GP,Gauteng,Centurion,1,905,2005-01-01,OPEN
+293,STR00293,Shoprite,Shoprite Secunda #392,MP,Mpumalanga,Secunda,1,1619,2009-01-01,OPEN
+294,STR00294,Shoprite,Shoprite Nelspruit #393,MP,Mpumalanga,Nelspruit,1,1099,2009-01-01,OPEN
+295,STR00295,Shoprite,Shoprite East London #394,EC,Eastern Cape,East London,7,1630,2000-01-01,OPEN
+296,STR00296,Shoprite,Shoprite Knysna #395,WC,Western Cape,Knysna,4,1119,2010-01-01,OPEN
+297,STR00297,Shoprite,Shoprite Randburg #396,GP,Gauteng,Randburg,1,1072,2024-01-01,OPEN
+298,STR00298,Shoprite,Shoprite George #397,WC,Western Cape,George,5,1414,2016-01-01,OPEN
+299,STR00299,Shoprite,Shoprite Sandton #398,GP,Gauteng,Sandton,1,745,2019-01-01,OPEN
+300,STR00300,Shoprite,Shoprite Midrand #399,GP,Gauteng,Midrand,1,783,2011-01-01,OPEN
+301,STR00301,Shoprite,Shoprite Uitenhage #400,EC,Eastern Cape,Uitenhage,7,1211,2010-01-01,OPEN
+302,STR00302,Shoprite,Shoprite Witbank #401,MP,Mpumalanga,Witbank,1,1792,2021-01-01,OPEN
+303,STR00303,Shoprite,Shoprite Polokwane #402,LP,Limpopo,Polokwane,1,659,2006-01-01,OPEN
+304,STR00304,Shoprite,Shoprite Pretoria #403,GP,Gauteng,Pretoria,6,1392,2010-01-01,OPEN
+305,STR00305,Shoprite,Shoprite Kempton Park #404,GP,Gauteng,Kempton Park,1,1015,2001-01-01,OPEN
+306,STR00306,Shoprite,Shoprite Hermanus #405,WC,Western Cape,Hermanus,4,714,2009-01-01,OPEN
+307,STR00307,Shoprite,Shoprite Knysna #406,WC,Western Cape,Knysna,5,1405,2012-01-01,OPEN
+308,STR00308,Shoprite,Shoprite Thohoyandou #407,LP,Limpopo,Thohoyandou,1,1078,2020-01-01,OPEN
+309,STR00309,Shoprite,Shoprite Bellville #408,WC,Western Cape,Bellville,4,1768,2014-01-01,OPEN
+310,STR00310,Shoprite,Shoprite Kroonstad #409,FS,Free State,Kroonstad,8,723,2007-01-01,OPEN
+311,STR00311,Shoprite,Shoprite Amanzimtoti #410,KZN,KwaZulu-Natal,Amanzimtoti,3,674,2012-01-01,OPEN
+312,STR00312,Shoprite,Shoprite Klerksdorp #411,NW,North West,Klerksdorp,8,1227,2017-01-01,OPEN
+313,STR00313,Shoprite,Shoprite Sasolburg #412,FS,Free State,Sasolburg,8,1453,2009-01-01,OPEN
+314,STR00314,Shoprite,Shoprite Sandton #413,GP,Gauteng,Sandton,6,1529,2004-01-01,OPEN
+315,STR00315,Shoprite,Shoprite Roodepoort #414,GP,Gauteng,Roodepoort,1,875,2011-01-01,OPEN
+316,STR00316,Shoprite,Shoprite Nelspruit #415,MP,Mpumalanga,Nelspruit,1,1205,2002-01-01,OPEN
+317,STR00317,Shoprite,Shoprite Boksburg #416,GP,Gauteng,Boksburg,6,881,2024-01-01,OPEN
+318,STR00318,Shoprite,Shoprite Mthatha #417,EC,Eastern Cape,Mthatha,7,909,2001-01-01,OPEN
+319,STR00319,Shoprite,Shoprite Grahamstown #418,EC,Eastern Cape,Grahamstown,7,1609,2017-01-01,OPEN
+320,STR00320,Shoprite,Shoprite Thohoyandou #419,LP,Limpopo,Thohoyandou,1,902,2018-01-01,OPEN
+321,STR00321,Shoprite,Shoprite Alberton #420,GP,Gauteng,Alberton,6,773,2019-01-01,OPEN
+322,STR00322,Shoprite,Shoprite Amanzimtoti #421,KZN,KwaZulu-Natal,Amanzimtoti,3,1051,2004-01-01,OPEN
+323,STR00323,Shoprite,Shoprite Richards Bay #422,KZN,KwaZulu-Natal,Richards Bay,2,1176,2012-01-01,OPEN
+324,STR00324,Shoprite,Shoprite Mahikeng #423,NW,North West,Mahikeng,1,717,2009-01-01,OPEN
+325,STR00325,Shoprite,Shoprite Umhlanga #424,KZN,KwaZulu-Natal,Umhlanga,2,1133,2004-01-01,OPEN
+326,STR00326,Shoprite,Shoprite Tzaneen #425,LP,Limpopo,Tzaneen,1,758,2000-01-01,OPEN
+327,STR00327,Shoprite,Shoprite Queenstown #426,EC,Eastern Cape,Queenstown,7,1683,2013-01-01,OPEN
+328,STR00328,Shoprite,Shoprite Worcester #427,WC,Western Cape,Worcester,5,1357,2025-01-01,OPEN
+329,STR00329,Shoprite,Shoprite Amanzimtoti #428,KZN,KwaZulu-Natal,Amanzimtoti,3,1622,2008-01-01,OPEN
+330,STR00330,Shoprite,Shoprite Sasolburg #429,FS,Free State,Sasolburg,8,1149,2021-01-01,OPEN
+331,STR00331,Shoprite,Shoprite Welkom #430,FS,Free State,Welkom,8,1338,2005-01-01,OPEN
+332,STR00332,Shoprite,Shoprite Worcester #431,WC,Western Cape,Worcester,5,1404,2010-01-01,OPEN
+333,STR00333,Shoprite,Shoprite Polokwane #432,LP,Limpopo,Polokwane,1,1482,2004-01-01,OPEN
+334,STR00334,Shoprite,Shoprite Nelspruit #433,MP,Mpumalanga,Nelspruit,1,962,2008-01-01,OPEN
+335,STR00335,Shoprite,Shoprite Hermanus #434,WC,Western Cape,Hermanus,4,616,2016-01-01,OPEN
+336,STR00336,Shoprite,Shoprite Hermanus #435,WC,Western Cape,Hermanus,5,779,2024-01-01,OPEN
+337,STR00337,Shoprite,Shoprite Oudtshoorn #436,WC,Western Cape,Oudtshoorn,5,892,2008-01-01,OPEN
+338,STR00338,Shoprite,Shoprite Sasolburg #437,FS,Free State,Sasolburg,8,1380,2010-01-01,OPEN
+339,STR00339,Shoprite,Shoprite Paarl #438,WC,Western Cape,Paarl,5,831,2025-01-01,OPEN
+340,STR00340,Shoprite,Shoprite Thohoyandou #439,LP,Limpopo,Thohoyandou,1,1165,2002-01-01,OPEN
+341,STR00341,Shoprite,Shoprite Centurion #440,GP,Gauteng,Centurion,1,971,2010-01-01,OPEN
+342,STR00342,Shoprite,Shoprite Johannesburg #441,GP,Gauteng,Johannesburg,6,1142,2018-01-01,OPEN
+343,STR00343,Shoprite,Shoprite Umhlanga #442,KZN,KwaZulu-Natal,Umhlanga,2,922,2011-01-01,OPEN
+344,STR00344,Shoprite,Shoprite Kroonstad #443,FS,Free State,Kroonstad,8,1232,2004-01-01,OPEN
+345,STR00345,Shoprite,Shoprite Uitenhage #444,EC,Eastern Cape,Uitenhage,7,1760,2011-01-01,OPEN
+346,STR00346,Shoprite,Shoprite Soweto #445,GP,Gauteng,Soweto,6,813,2019-01-01,OPEN
+347,STR00347,Shoprite,Shoprite Ermelo #446,MP,Mpumalanga,Ermelo,1,849,2013-01-01,OPEN
+348,STR00348,Shoprite,Shoprite Tzaneen #447,LP,Limpopo,Tzaneen,1,890,2001-01-01,OPEN
+349,STR00349,Shoprite,Shoprite Pretoria #448,GP,Gauteng,Pretoria,6,1740,2006-01-01,OPEN
+350,STR00350,Shoprite,Shoprite George #449,WC,Western Cape,George,4,1172,2021-01-01,OPEN
+351,STR00351,Shoprite,Shoprite Ermelo #450,MP,Mpumalanga,Ermelo,6,1543,2006-01-01,OPEN
+352,STR00352,Shoprite,Shoprite Johannesburg #451,GP,Gauteng,Johannesburg,6,830,2013-01-01,OPEN
+353,STR00353,Shoprite,Shoprite Boksburg #452,GP,Gauteng,Boksburg,1,651,2020-01-01,OPEN
+354,STR00354,Shoprite,Shoprite Richards Bay #453,KZN,KwaZulu-Natal,Richards Bay,3,1055,2012-01-01,OPEN
+355,STR00355,Shoprite,Shoprite Empangeni #454,KZN,KwaZulu-Natal,Empangeni,2,1419,2019-01-01,OPEN
+356,STR00356,Shoprite,Shoprite Stellenbosch #455,WC,Western Cape,Stellenbosch,4,1558,1998-01-01,OPEN
+357,STR00357,Shoprite,Shoprite Boksburg #456,GP,Gauteng,Boksburg,1,695,2022-01-01,OPEN
+358,STR00358,Shoprite,Shoprite Richards Bay #457,KZN,KwaZulu-Natal,Richards Bay,3,1499,2015-01-01,OPEN
+359,STR00359,Shoprite,Shoprite Randburg #458,GP,Gauteng,Randburg,6,1663,2019-01-01,OPEN
+360,STR00360,Shoprite,Shoprite Rustenburg #459,NW,North West,Rustenburg,1,911,2013-01-01,OPEN
+361,STR00361,Shoprite,Shoprite Witbank #460,MP,Mpumalanga,Witbank,1,734,2007-01-01,OPEN
+362,STR00362,Shoprite,Shoprite Boksburg #461,GP,Gauteng,Boksburg,6,999,2001-01-01,OPEN
+363,STR00363,Shoprite,Shoprite Stellenbosch #462,WC,Western Cape,Stellenbosch,5,1774,2020-01-01,OPEN
+364,STR00364,Shoprite,Shoprite Bethlehem #463,FS,Free State,Bethlehem,8,1683,2023-01-01,OPEN
+365,STR00365,Shoprite,Shoprite Newcastle #464,KZN,KwaZulu-Natal,Newcastle,2,936,1999-01-01,OPEN
+366,STR00366,Shoprite,Shoprite Roodepoort #465,GP,Gauteng,Roodepoort,1,1308,2009-01-01,OPEN
+367,STR00367,Shoprite,Shoprite East London #466,EC,Eastern Cape,East London,7,654,2017-01-01,OPEN
+368,STR00368,Shoprite,Shoprite Umhlanga #467,KZN,KwaZulu-Natal,Umhlanga,3,1304,2002-01-01,OPEN
+369,STR00369,Shoprite,Shoprite Queenstown #468,EC,Eastern Cape,Queenstown,7,1036,2005-01-01,OPEN
+370,STR00370,Shoprite,Shoprite Boksburg #469,GP,Gauteng,Boksburg,1,1506,2005-01-01,OPEN
+371,STR00371,Shoprite,Shoprite Grahamstown #470,EC,Eastern Cape,Grahamstown,7,956,1998-01-01,OPEN
+372,STR00372,Shoprite,Shoprite Stellenbosch #471,WC,Western Cape,Stellenbosch,5,1325,2005-01-01,OPEN
+373,STR00373,Shoprite,Shoprite Roodepoort #472,GP,Gauteng,Roodepoort,6,778,2014-01-01,OPEN
+374,STR00374,Shoprite,Shoprite Mossel Bay #473,WC,Western Cape,Mossel Bay,4,1413,2000-01-01,OPEN
+375,STR00375,Shoprite,Shoprite Nelspruit #474,MP,Mpumalanga,Nelspruit,6,1647,2003-01-01,OPEN
+376,STR00376,Shoprite,Shoprite Bellville #475,WC,Western Cape,Bellville,5,1635,2023-01-01,OPEN
+377,STR00377,Shoprite,Shoprite Roodepoort #476,GP,Gauteng,Roodepoort,1,679,2001-01-01,OPEN
+378,STR00378,Shoprite,Shoprite Sandton #477,GP,Gauteng,Sandton,1,1411,2001-01-01,OPEN
+379,STR00379,Shoprite,Shoprite Hermanus #478,WC,Western Cape,Hermanus,4,1747,2018-01-01,OPEN
+380,STR00380,Shoprite,Shoprite Potchefstroom #479,NW,North West,Potchefstroom,1,1490,2020-01-01,OPEN
+381,STR00381,Shoprite,Shoprite Bethlehem #480,FS,Free State,Bethlehem,8,1579,2004-01-01,OPEN
+382,STR00382,Shoprite,Shoprite Paarl #481,WC,Western Cape,Paarl,5,897,2004-01-01,OPEN
+383,STR00383,Shoprite,Shoprite Klerksdorp #482,NW,North West,Klerksdorp,1,890,2003-01-01,OPEN
+384,STR00384,Shoprite,Shoprite Polokwane #483,LP,Limpopo,Polokwane,1,1198,2006-01-01,OPEN
+385,STR00385,Shoprite,Shoprite Springbok #484,NC,Northern Cape,Springbok,4,1759,2002-01-01,OPEN
+386,STR00386,Shoprite,Shoprite East London #485,EC,Eastern Cape,East London,7,1324,2010-01-01,OPEN
+387,STR00387,Shoprite,Shoprite Midrand #486,GP,Gauteng,Midrand,1,1291,2004-01-01,OPEN
+388,STR00388,Shoprite,Shoprite Knysna #487,WC,Western Cape,Knysna,4,1096,2024-01-01,OPEN
+389,STR00389,Shoprite,Shoprite Witbank #488,MP,Mpumalanga,Witbank,6,736,2025-01-01,OPEN
+390,STR00390,Shoprite,Shoprite Amanzimtoti #489,KZN,KwaZulu-Natal,Amanzimtoti,2,1412,2019-01-01,OPEN
+391,STR00391,Shoprite,Shoprite Bloemfontein #490,FS,Free State,Bloemfontein,8,1083,1998-01-01,OPEN
+392,STR00392,Shoprite,Shoprite Umhlanga #491,KZN,KwaZulu-Natal,Umhlanga,3,1744,2007-01-01,OPEN
+393,STR00393,Shoprite,Shoprite Welkom #492,FS,Free State,Welkom,8,627,2019-01-01,OPEN
+394,STR00394,Shoprite,Shoprite Sandton #493,GP,Gauteng,Sandton,6,1421,2019-01-01,OPEN
+395,STR00395,Shoprite,Shoprite Boksburg #494,GP,Gauteng,Boksburg,6,1417,2005-01-01,OPEN
+396,STR00396,Shoprite,Shoprite Ladysmith #495,KZN,KwaZulu-Natal,Ladysmith,3,1390,2000-01-01,OPEN
+397,STR00397,Shoprite,Shoprite Mossel Bay #496,WC,Western Cape,Mossel Bay,5,692,2009-01-01,OPEN
+398,STR00398,Shoprite,Shoprite Paarl #497,WC,Western Cape,Paarl,4,737,2009-01-01,OPEN
+399,STR00399,Shoprite,Shoprite Pretoria #498,GP,Gauteng,Pretoria,6,758,2016-01-01,OPEN
+400,STR00400,Shoprite,Shoprite Kroonstad #499,FS,Free State,Kroonstad,8,1477,2006-01-01,OPEN
+401,STR00401,Shoprite,Shoprite Midrand #500,GP,Gauteng,Midrand,1,1369,2016-01-01,OPEN
+402,STR00402,Shoprite,Shoprite Potchefstroom #501,NW,North West,Potchefstroom,8,1720,2013-01-01,OPEN
+403,STR00403,Shoprite,Shoprite Cape Town #502,WC,Western Cape,Cape Town,4,1577,2023-01-01,OPEN
+404,STR00404,Shoprite,Shoprite Johannesburg #503,GP,Gauteng,Johannesburg,1,1119,2003-01-01,OPEN
+405,STR00405,Shoprite,Shoprite Somerset West #504,WC,Western Cape,Somerset West,4,630,2000-01-01,OPEN
+406,STR00406,Shoprite,Shoprite Pietermaritzburg #505,KZN,KwaZulu-Natal,Pietermaritzburg,3,878,2021-01-01,OPEN
+407,STR00407,Shoprite,Shoprite Mthatha #506,EC,Eastern Cape,Mthatha,7,750,2004-01-01,OPEN
+408,STR00408,Shoprite,Shoprite Empangeni #507,KZN,KwaZulu-Natal,Empangeni,3,1547,2015-01-01,OPEN
+409,STR00409,Shoprite,Shoprite Empangeni #508,KZN,KwaZulu-Natal,Empangeni,3,674,2016-01-01,OPEN
+410,STR00410,Shoprite,Shoprite Tzaneen #509,LP,Limpopo,Tzaneen,1,751,2003-01-01,OPEN
+411,STR00411,Shoprite,Shoprite Stellenbosch #510,WC,Western Cape,Stellenbosch,5,763,2023-01-01,OPEN
+412,STR00412,Shoprite,Shoprite Richards Bay #511,KZN,KwaZulu-Natal,Richards Bay,2,1496,2018-01-01,OPEN
+413,STR00413,Shoprite,Shoprite Mossel Bay #512,WC,Western Cape,Mossel Bay,4,1294,2020-01-01,OPEN
+414,STR00414,Shoprite,Shoprite Port Shepstone #513,KZN,KwaZulu-Natal,Port Shepstone,3,1460,2009-01-01,OPEN
+415,STR00415,Shoprite,Shoprite Boksburg #514,GP,Gauteng,Boksburg,1,1770,2020-01-01,OPEN
+416,STR00416,Shoprite,Shoprite Gqeberha #515,EC,Eastern Cape,Gqeberha,7,787,2018-01-01,OPEN
+417,STR00417,Shoprite,Shoprite Kroonstad #516,FS,Free State,Kroonstad,8,985,1998-01-01,OPEN
+418,STR00418,Shoprite,Shoprite Tzaneen #517,LP,Limpopo,Tzaneen,1,1077,2001-01-01,OPEN
+419,STR00419,Shoprite,Shoprite Pretoria #518,GP,Gauteng,Pretoria,1,1800,2000-01-01,OPEN
+420,STR00420,Shoprite,Shoprite George #519,WC,Western Cape,George,4,1595,2023-01-01,OPEN
+421,STR00421,Shoprite,Shoprite Oudtshoorn #520,WC,Western Cape,Oudtshoorn,5,1534,2023-01-01,OPEN
+422,STR00422,Shoprite,Shoprite Polokwane #521,LP,Limpopo,Polokwane,1,702,1998-01-01,OPEN
+423,STR00423,Shoprite,Shoprite Roodepoort #522,GP,Gauteng,Roodepoort,6,1227,2007-01-01,OPEN
+424,STR00424,Shoprite,Shoprite Newcastle #523,KZN,KwaZulu-Natal,Newcastle,3,1421,2007-01-01,OPEN
+425,STR00425,Shoprite,Shoprite Amanzimtoti #524,KZN,KwaZulu-Natal,Amanzimtoti,3,782,2011-01-01,OPEN
+426,STR00426,Shoprite,Shoprite Kroonstad #525,FS,Free State,Kroonstad,8,1473,2020-01-01,OPEN
+427,STR00427,Shoprite,Shoprite Upington #526,NC,Northern Cape,Upington,4,667,1998-01-01,OPEN
+428,STR00428,Shoprite,Shoprite George #527,WC,Western Cape,George,5,1051,2013-01-01,OPEN
+429,STR00429,Shoprite,Shoprite Centurion #528,GP,Gauteng,Centurion,6,1757,2011-01-01,OPEN
+430,STR00430,Shoprite,Shoprite Newcastle #529,KZN,KwaZulu-Natal,Newcastle,3,761,2001-01-01,OPEN
+431,STR00431,Shoprite,Shoprite Witbank #530,MP,Mpumalanga,Witbank,6,1765,2020-01-01,OPEN
+432,STR00432,Shoprite,Shoprite Stellenbosch #531,WC,Western Cape,Stellenbosch,5,701,2020-01-01,OPEN
+433,STR00433,Shoprite,Shoprite Cape Town #532,WC,Western Cape,Cape Town,5,967,2009-01-01,OPEN
+434,STR00434,Shoprite,Shoprite Hermanus #533,WC,Western Cape,Hermanus,4,929,2012-01-01,OPEN
+435,STR00435,Shoprite,Shoprite Knysna #534,WC,Western Cape,Knysna,4,1213,2005-01-01,OPEN
+436,STR00436,Shoprite,Shoprite Mahikeng #535,NW,North West,Mahikeng,8,1674,2017-01-01,OPEN
+437,STR00437,Shoprite,Shoprite Ermelo #536,MP,Mpumalanga,Ermelo,6,1405,2009-01-01,OPEN
+438,STR00438,Shoprite,Shoprite Thohoyandou #537,LP,Limpopo,Thohoyandou,1,1107,2007-01-01,OPEN
+439,STR00439,Shoprite,Shoprite Mahikeng #538,NW,North West,Mahikeng,8,1053,2007-01-01,OPEN
+440,STR00440,Shoprite,Shoprite Mthatha #539,EC,Eastern Cape,Mthatha,7,848,2010-01-01,OPEN
+441,STR00441,Shoprite,Shoprite Umhlanga #540,KZN,KwaZulu-Natal,Umhlanga,2,1129,2006-01-01,OPEN
+442,STR00442,Shoprite,Shoprite Umhlanga #541,KZN,KwaZulu-Natal,Umhlanga,3,1777,2006-01-01,OPEN
+443,STR00443,Shoprite,Shoprite Nelspruit #542,MP,Mpumalanga,Nelspruit,6,1676,2022-01-01,OPEN
+444,STR00444,Shoprite,Shoprite East London #543,EC,Eastern Cape,East London,7,1059,1999-01-01,OPEN
+445,STR00445,Shoprite,Shoprite Richards Bay #544,KZN,KwaZulu-Natal,Richards Bay,3,1576,2021-01-01,OPEN
+446,STR00446,Shoprite,Shoprite Polokwane #545,LP,Limpopo,Polokwane,1,1110,2003-01-01,OPEN
+447,STR00447,Shoprite,Shoprite Kempton Park #546,GP,Gauteng,Kempton Park,1,1769,2012-01-01,OPEN
+448,STR00448,Shoprite,Shoprite Pretoria #547,GP,Gauteng,Pretoria,1,1580,2022-01-01,OPEN
+449,STR00449,Shoprite,Shoprite Centurion #548,GP,Gauteng,Centurion,6,1662,2009-01-01,OPEN
+450,STR00450,Shoprite,Shoprite Randburg #549,GP,Gauteng,Randburg,6,1289,2013-01-01,OPEN
+451,STR00451,Checkers,Checkers Welkom #100,FS,Free State,Welkom,8,976,2005-01-01,OPEN
+452,STR00452,Checkers,Checkers Centurion #101,GP,Gauteng,Centurion,6,2060,2011-01-01,OPEN
+453,STR00453,Checkers,Checkers Nelspruit #102,MP,Mpumalanga,Nelspruit,6,1203,2021-01-01,OPEN
+454,STR00454,Checkers,Checkers Durban #103,KZN,KwaZulu-Natal,Durban,2,1189,2021-01-01,OPEN
+455,STR00455,Checkers,Checkers Witbank #104,MP,Mpumalanga,Witbank,1,2494,2001-01-01,OPEN
+456,STR00456,Checkers,Checkers Randburg #105,GP,Gauteng,Randburg,6,1705,2025-01-01,OPEN
+457,STR00457,Checkers,Checkers Stellenbosch #106,WC,Western Cape,Stellenbosch,5,1577,2016-01-01,OPEN
+458,STR00458,Checkers,Checkers Cape Town #107,WC,Western Cape,Cape Town,5,2037,2011-01-01,OPEN
+459,STR00459,Checkers,Checkers Klerksdorp #108,NW,North West,Klerksdorp,1,1040,2006-01-01,OPEN
+460,STR00460,Checkers,Checkers East London #109,EC,Eastern Cape,East London,7,1431,2020-01-01,OPEN
+461,STR00461,Checkers,Checkers Stellenbosch #110,WC,Western Cape,Stellenbosch,5,1073,2000-01-01,OPEN
+462,STR00462,Checkers,Checkers Johannesburg #111,GP,Gauteng,Johannesburg,6,1319,2007-01-01,OPEN
+463,STR00463,Checkers,Checkers Secunda #112,MP,Mpumalanga,Secunda,1,1222,2019-01-01,OPEN
+464,STR00464,Checkers,Checkers East London #113,EC,Eastern Cape,East London,7,1299,2007-01-01,OPEN
+465,STR00465,Checkers,Checkers Worcester #114,WC,Western Cape,Worcester,4,1732,2004-01-01,OPEN
+466,STR00466,Checkers,Checkers Mthatha #115,EC,Eastern Cape,Mthatha,7,1375,2019-01-01,OPEN
+467,STR00467,Checkers,Checkers Hermanus #116,WC,Western Cape,Hermanus,5,2418,2020-01-01,OPEN
+468,STR00468,Checkers,Checkers Grahamstown #117,EC,Eastern Cape,Grahamstown,7,957,1999-01-01,OPEN
+469,STR00469,Checkers,Checkers Richards Bay #118,KZN,KwaZulu-Natal,Richards Bay,3,2065,2025-01-01,OPEN
+470,STR00470,Checkers,Checkers Paarl #119,WC,Western Cape,Paarl,4,2548,2018-01-01,OPEN
+471,STR00471,Checkers,Checkers Benoni #120,GP,Gauteng,Benoni,6,1485,2000-01-01,OPEN
+472,STR00472,Checkers,Checkers Durban #121,KZN,KwaZulu-Natal,Durban,2,1518,2004-01-01,OPEN
+473,STR00473,Checkers,Checkers Witbank #122,MP,Mpumalanga,Witbank,1,1367,2015-01-01,OPEN
+474,STR00474,Checkers,Checkers Bloemfontein #123,FS,Free State,Bloemfontein,8,1234,2003-01-01,OPEN
+475,STR00475,Checkers,Checkers Bethlehem #124,FS,Free State,Bethlehem,8,1700,2008-01-01,OPEN
+476,STR00476,Checkers,Checkers Alberton #125,GP,Gauteng,Alberton,6,2443,2022-01-01,OPEN
+477,STR00477,Checkers,Checkers Sandton #126,GP,Gauteng,Sandton,1,1965,2002-01-01,OPEN
+478,STR00478,Checkers,Checkers Durban #127,KZN,KwaZulu-Natal,Durban,2,1179,1998-01-01,OPEN
+479,STR00479,Checkers,Checkers Midrand #128,GP,Gauteng,Midrand,6,1120,2004-01-01,OPEN
+480,STR00480,Checkers,Checkers Soweto #129,GP,Gauteng,Soweto,1,944,2005-01-01,OPEN
+481,STR00481,Checkers,Checkers Benoni #130,GP,Gauteng,Benoni,6,1803,2000-01-01,OPEN
+482,STR00482,Checkers,Checkers Queenstown #131,EC,Eastern Cape,Queenstown,7,1776,2023-01-01,OPEN
+483,STR00483,Checkers,Checkers Mossel Bay #132,WC,Western Cape,Mossel Bay,4,1774,2002-01-01,OPEN
+484,STR00484,Checkers,Checkers Kroonstad #133,FS,Free State,Kroonstad,8,1410,2021-01-01,OPEN
+485,STR00485,Checkers,Checkers Boksburg #134,GP,Gauteng,Boksburg,6,1658,2004-01-01,OPEN
+486,STR00486,Checkers,Checkers Soweto #135,GP,Gauteng,Soweto,1,2404,2016-01-01,OPEN
+487,STR00487,Checkers,Checkers Newcastle #136,KZN,KwaZulu-Natal,Newcastle,3,1249,2005-01-01,OPEN
+488,STR00488,Checkers,Checkers Alberton #137,GP,Gauteng,Alberton,6,2522,2002-01-01,OPEN
+489,STR00489,Checkers,Checkers Benoni #138,GP,Gauteng,Benoni,6,1039,2023-01-01,OPEN
+490,STR00490,Checkers,Checkers Pietermaritzburg #139,KZN,KwaZulu-Natal,Pietermaritzburg,2,1830,2020-01-01,OPEN
+491,STR00491,Checkers,Checkers Boksburg #140,GP,Gauteng,Boksburg,1,2532,2002-01-01,OPEN
+492,STR00492,Checkers,Checkers Cape Town #141,WC,Western Cape,Cape Town,5,1799,2024-01-01,OPEN
+493,STR00493,Checkers,Checkers Middelburg #142,MP,Mpumalanga,Middelburg,6,2252,2015-01-01,OPEN
+494,STR00494,Checkers,Checkers Newcastle #143,KZN,KwaZulu-Natal,Newcastle,2,2215,2018-01-01,OPEN
+495,STR00495,Checkers,Checkers Mthatha #144,EC,Eastern Cape,Mthatha,7,1747,2001-01-01,OPEN
+496,STR00496,Checkers,Checkers Amanzimtoti #145,KZN,KwaZulu-Natal,Amanzimtoti,2,1002,2010-01-01,OPEN
+497,STR00497,Checkers,Checkers Hermanus #146,WC,Western Cape,Hermanus,4,1802,2002-01-01,OPEN
+498,STR00498,Checkers,Checkers Welkom #147,FS,Free State,Welkom,8,1595,2014-01-01,OPEN
+499,STR00499,Checkers,Checkers Witbank #148,MP,Mpumalanga,Witbank,1,1218,2008-01-01,OPEN
+500,STR00500,Checkers,Checkers Empangeni #149,KZN,KwaZulu-Natal,Empangeni,3,1707,2022-01-01,OPEN
+501,STR00501,Checkers,Checkers Port Shepstone #150,KZN,KwaZulu-Natal,Port Shepstone,3,2384,2021-01-01,OPEN
+502,STR00502,Checkers,Checkers Benoni #151,GP,Gauteng,Benoni,1,1410,2018-01-01,OPEN
+503,STR00503,Checkers,Checkers Kempton Park #152,GP,Gauteng,Kempton Park,1,1281,2001-01-01,OPEN
+504,STR00504,Checkers,Checkers Johannesburg #153,GP,Gauteng,Johannesburg,1,1144,2014-01-01,OPEN
+505,STR00505,Checkers,Checkers Stellenbosch #154,WC,Western Cape,Stellenbosch,4,2327,2009-01-01,OPEN
+506,STR00506,Checkers,Checkers Rustenburg #155,NW,North West,Rustenburg,8,2271,2000-01-01,OPEN
+507,STR00507,Checkers,Checkers Mossel Bay #156,WC,Western Cape,Mossel Bay,4,1496,2020-01-01,OPEN
+508,STR00508,Checkers,Checkers Midrand #157,GP,Gauteng,Midrand,1,1209,2009-01-01,OPEN
+509,STR00509,Checkers,Checkers Alberton #158,GP,Gauteng,Alberton,6,1626,2003-01-01,OPEN
+510,STR00510,Checkers,Checkers Newcastle #159,KZN,KwaZulu-Natal,Newcastle,2,1108,2003-01-01,OPEN
+511,STR00511,Checkers,Checkers Roodepoort #160,GP,Gauteng,Roodepoort,6,2432,2006-01-01,OPEN
+512,STR00512,Checkers,Checkers Sandton #161,GP,Gauteng,Sandton,6,1234,1998-01-01,OPEN
+513,STR00513,Checkers,Checkers Paarl #162,WC,Western Cape,Paarl,5,1195,2001-01-01,OPEN
+514,STR00514,Checkers,Checkers Somerset West #163,WC,Western Cape,Somerset West,5,1556,2019-01-01,OPEN
+515,STR00515,Checkers,Checkers Welkom #164,FS,Free State,Welkom,8,1299,2021-01-01,OPEN
+516,STR00516,Checkers,Checkers East London #165,EC,Eastern Cape,East London,7,1493,2007-01-01,OPEN
+517,STR00517,Checkers,Checkers Worcester #166,WC,Western Cape,Worcester,4,1928,2024-01-01,OPEN
+518,STR00518,Checkers,Checkers Durban #167,KZN,KwaZulu-Natal,Durban,3,1454,2012-01-01,OPEN
+519,STR00519,Checkers,Checkers Johannesburg #168,GP,Gauteng,Johannesburg,1,1666,2017-01-01,OPEN
+520,STR00520,Checkers,Checkers Gqeberha #169,EC,Eastern Cape,Gqeberha,7,2153,2022-01-01,OPEN
+521,STR00521,Checkers,Checkers Secunda #170,MP,Mpumalanga,Secunda,1,1917,2006-01-01,OPEN
+522,STR00522,Checkers,Checkers Empangeni #171,KZN,KwaZulu-Natal,Empangeni,2,1774,2018-01-01,OPEN
+523,STR00523,Checkers,Checkers Grahamstown #172,EC,Eastern Cape,Grahamstown,7,2417,2008-01-01,OPEN
+524,STR00524,Checkers,Checkers Paarl #173,WC,Western Cape,Paarl,5,1826,2013-01-01,OPEN
+525,STR00525,Checkers,Checkers Richards Bay #174,KZN,KwaZulu-Natal,Richards Bay,2,1634,2016-01-01,OPEN
+526,STR00526,Checkers,Checkers Pretoria #175,GP,Gauteng,Pretoria,6,1717,2009-01-01,OPEN
+527,STR00527,Checkers,Checkers Richards Bay #176,KZN,KwaZulu-Natal,Richards Bay,2,956,2018-01-01,OPEN
+528,STR00528,Checkers,Checkers Paarl #177,WC,Western Cape,Paarl,4,2113,2007-01-01,OPEN
+529,STR00529,Checkers,Checkers Kempton Park #178,GP,Gauteng,Kempton Park,6,1740,2004-01-01,OPEN
+530,STR00530,Checkers,Checkers Randburg #179,GP,Gauteng,Randburg,6,2451,2019-01-01,OPEN
+531,STR00531,Checkers,Checkers East London #180,EC,Eastern Cape,East London,7,1792,2005-01-01,OPEN
+532,STR00532,Checkers,Checkers Empangeni #181,KZN,KwaZulu-Natal,Empangeni,2,1252,2024-01-01,OPEN
+533,STR00533,Checkers,Checkers Richards Bay #182,KZN,KwaZulu-Natal,Richards Bay,3,987,2011-01-01,OPEN
+534,STR00534,Checkers,Checkers Somerset West #183,WC,Western Cape,Somerset West,5,1430,2017-01-01,OPEN
+535,STR00535,Checkers,Checkers Pietermaritzburg #184,KZN,KwaZulu-Natal,Pietermaritzburg,3,1298,2004-01-01,OPEN
+536,STR00536,Checkers,Checkers Queenstown #185,EC,Eastern Cape,Queenstown,7,2002,2022-01-01,OPEN
+537,STR00537,Checkers,Checkers Middelburg #186,MP,Mpumalanga,Middelburg,1,2075,2015-01-01,OPEN
+538,STR00538,Checkers,Checkers Witbank #187,MP,Mpumalanga,Witbank,1,1031,2024-01-01,OPEN
+539,STR00539,Checkers,Checkers Richards Bay #188,KZN,KwaZulu-Natal,Richards Bay,2,1093,2024-01-01,OPEN
+540,STR00540,Checkers,Checkers Randburg #189,GP,Gauteng,Randburg,1,2434,2007-01-01,OPEN
+541,STR00541,Checkers,Checkers Ladysmith #190,KZN,KwaZulu-Natal,Ladysmith,2,2002,2002-01-01,OPEN
+542,STR00542,Checkers,Checkers Ermelo #191,MP,Mpumalanga,Ermelo,6,1922,2010-01-01,OPEN
+543,STR00543,Checkers,Checkers Bellville #192,WC,Western Cape,Bellville,4,2463,2016-01-01,OPEN
+544,STR00544,Checkers,Checkers Centurion #193,GP,Gauteng,Centurion,6,2039,2015-01-01,OPEN
+545,STR00545,Checkers,Checkers Centurion #194,GP,Gauteng,Centurion,6,2436,2002-01-01,OPEN
+546,STR00546,Checkers,Checkers Nelspruit #195,MP,Mpumalanga,Nelspruit,1,2527,2010-01-01,OPEN
+547,STR00547,Checkers,Checkers Benoni #196,GP,Gauteng,Benoni,6,2207,2014-01-01,OPEN
+548,STR00548,Checkers,Checkers Port Shepstone #197,KZN,KwaZulu-Natal,Port Shepstone,3,1570,2022-01-01,OPEN
+549,STR00549,Checkers,Checkers Queenstown #198,EC,Eastern Cape,Queenstown,7,1722,2007-01-01,OPEN
+550,STR00550,Checkers,Checkers Mokopane #199,LP,Limpopo,Mokopane,1,2487,2021-01-01,OPEN
+551,STR00551,Checkers,Checkers Alberton #200,GP,Gauteng,Alberton,6,1164,2004-01-01,OPEN
+552,STR00552,Checkers,Checkers Bellville #201,WC,Western Cape,Bellville,4,2150,2002-01-01,OPEN
+553,STR00553,Checkers,Checkers East London #202,EC,Eastern Cape,East London,7,1266,2000-01-01,OPEN
+554,STR00554,Checkers,Checkers Centurion #203,GP,Gauteng,Centurion,1,2313,2000-01-01,OPEN
+555,STR00555,Checkers,Checkers Midrand #204,GP,Gauteng,Midrand,1,1418,2015-01-01,OPEN
+556,STR00556,Checkers,Checkers Centurion #205,GP,Gauteng,Centurion,1,2400,2013-01-01,OPEN
+557,STR00557,Checkers,Checkers Polokwane #206,LP,Limpopo,Polokwane,1,1864,2025-01-01,OPEN
+558,STR00558,Checkers,Checkers Empangeni #207,KZN,KwaZulu-Natal,Empangeni,2,2104,2017-01-01,OPEN
+559,STR00559,Checkers,Checkers Port Shepstone #208,KZN,KwaZulu-Natal,Port Shepstone,3,1097,2018-01-01,OPEN
+560,STR00560,Checkers,Checkers Pretoria #209,GP,Gauteng,Pretoria,1,2406,2015-01-01,OPEN
+561,STR00561,Checkers,Checkers Roodepoort #210,GP,Gauteng,Roodepoort,1,1764,2011-01-01,OPEN
+562,STR00562,Checkers,Checkers Alberton #211,GP,Gauteng,Alberton,1,904,1999-01-01,OPEN
+563,STR00563,Checkers,Checkers Alberton #212,GP,Gauteng,Alberton,1,1230,2015-01-01,OPEN
+564,STR00564,Checkers,Checkers Stellenbosch #213,WC,Western Cape,Stellenbosch,5,1097,1998-01-01,OPEN
+565,STR00565,Checkers,Checkers George #214,WC,Western Cape,George,4,2558,2003-01-01,OPEN
+566,STR00566,Checkers,Checkers Vereeniging #215,GP,Gauteng,Vereeniging,1,2353,1998-01-01,OPEN
+567,STR00567,Checkers,Checkers Thohoyandou #216,LP,Limpopo,Thohoyandou,1,2559,2017-01-01,OPEN
+568,STR00568,Checkers,Checkers Johannesburg #217,GP,Gauteng,Johannesburg,1,1823,2010-01-01,OPEN
+569,STR00569,Checkers,Checkers Richards Bay #218,KZN,KwaZulu-Natal,Richards Bay,3,2584,2012-01-01,OPEN
+570,STR00570,Checkers,Checkers East London #219,EC,Eastern Cape,East London,7,1263,2025-01-01,OPEN
+571,STR00571,Checkers,Checkers Port Shepstone #220,KZN,KwaZulu-Natal,Port Shepstone,2,2148,2010-01-01,OPEN
+572,STR00572,Checkers,Checkers East London #221,EC,Eastern Cape,East London,7,2568,2013-01-01,OPEN
+573,STR00573,Checkers,Checkers Hermanus #222,WC,Western Cape,Hermanus,4,1588,2018-01-01,OPEN
+574,STR00574,Checkers,Checkers Sandton #223,GP,Gauteng,Sandton,6,1714,2012-01-01,OPEN
+575,STR00575,Checkers,Checkers Vereeniging #224,GP,Gauteng,Vereeniging,6,1524,2022-01-01,OPEN
+576,STR00576,Checkers,Checkers Soweto #225,GP,Gauteng,Soweto,1,1217,2019-01-01,OPEN
+577,STR00577,Checkers,Checkers Umhlanga #226,KZN,KwaZulu-Natal,Umhlanga,2,1362,2020-01-01,OPEN
+578,STR00578,Checkers,Checkers Port Shepstone #227,KZN,KwaZulu-Natal,Port Shepstone,2,1940,2021-01-01,OPEN
+579,STR00579,Checkers,Checkers Klerksdorp #228,NW,North West,Klerksdorp,8,1844,2021-01-01,OPEN
+580,STR00580,Checkers,Checkers Port Shepstone #229,KZN,KwaZulu-Natal,Port Shepstone,2,1876,2008-01-01,OPEN
+581,STR00581,Checkers,Checkers Uitenhage #230,EC,Eastern Cape,Uitenhage,7,1887,2013-01-01,OPEN
+582,STR00582,Checkers,Checkers Knysna #231,WC,Western Cape,Knysna,4,2447,2018-01-01,OPEN
+583,STR00583,Checkers,Checkers Gqeberha #232,EC,Eastern Cape,Gqeberha,7,2200,2015-01-01,OPEN
+584,STR00584,Checkers,Checkers Umhlanga #233,KZN,KwaZulu-Natal,Umhlanga,3,2477,2000-01-01,OPEN
+585,STR00585,Checkers,Checkers Newcastle #234,KZN,KwaZulu-Natal,Newcastle,3,1739,2001-01-01,OPEN
+586,STR00586,Checkers,Checkers Ladysmith #235,KZN,KwaZulu-Natal,Ladysmith,2,2115,2011-01-01,OPEN
+587,STR00587,Checkers,Checkers Port Shepstone #236,KZN,KwaZulu-Natal,Port Shepstone,2,2318,2007-01-01,OPEN
+588,STR00588,Checkers,Checkers Paarl #237,WC,Western Cape,Paarl,5,2404,2019-01-01,OPEN
+589,STR00589,Checkers,Checkers Alberton #238,GP,Gauteng,Alberton,1,1700,2010-01-01,OPEN
+590,STR00590,Checkers,Checkers Hermanus #239,WC,Western Cape,Hermanus,5,1687,2022-01-01,OPEN
+591,STR00591,Checkers,Checkers Midrand #240,GP,Gauteng,Midrand,6,2598,2001-01-01,OPEN
+592,STR00592,Checkers,Checkers Soweto #241,GP,Gauteng,Soweto,6,1530,2017-01-01,OPEN
+593,STR00593,Checkers,Checkers Ladysmith #242,KZN,KwaZulu-Natal,Ladysmith,2,1567,2005-01-01,OPEN
+594,STR00594,Checkers,Checkers Durban #243,KZN,KwaZulu-Natal,Durban,3,2464,2012-01-01,OPEN
+595,STR00595,Checkers,Checkers Grahamstown #244,EC,Eastern Cape,Grahamstown,7,2144,1998-01-01,OPEN
+596,STR00596,Checkers,Checkers Paarl #245,WC,Western Cape,Paarl,5,2466,2017-01-01,OPEN
+597,STR00597,Checkers,Checkers Bellville #246,WC,Western Cape,Bellville,5,2465,2012-01-01,OPEN
+598,STR00598,Checkers,Checkers Newcastle #247,KZN,KwaZulu-Natal,Newcastle,3,944,2015-01-01,OPEN
+599,STR00599,Checkers,Checkers Centurion #248,GP,Gauteng,Centurion,6,2304,2019-01-01,OPEN
+600,STR00600,Checkers,Checkers Amanzimtoti #249,KZN,KwaZulu-Natal,Amanzimtoti,3,1730,2006-01-01,OPEN
+601,STR00601,Checkers,Checkers Kempton Park #250,GP,Gauteng,Kempton Park,1,2145,2023-01-01,OPEN
+602,STR00602,Checkers,Checkers Pietermaritzburg #251,KZN,KwaZulu-Natal,Pietermaritzburg,3,1741,2012-01-01,OPEN
+603,STR00603,Checkers,Checkers Vereeniging #252,GP,Gauteng,Vereeniging,6,2190,2008-01-01,OPEN
+604,STR00604,Checkers,Checkers Roodepoort #253,GP,Gauteng,Roodepoort,1,1499,2022-01-01,OPEN
+605,STR00605,Checkers,Checkers Amanzimtoti #254,KZN,KwaZulu-Natal,Amanzimtoti,2,1493,2008-01-01,OPEN
+606,STR00606,Checkers,Checkers Boksburg #255,GP,Gauteng,Boksburg,1,2210,2014-01-01,OPEN
+607,STR00607,Checkers,Checkers Kroonstad #256,FS,Free State,Kroonstad,8,1250,2001-01-01,OPEN
+608,STR00608,Checkers,Checkers Witbank #257,MP,Mpumalanga,Witbank,1,1716,2002-01-01,OPEN
+609,STR00609,Checkers,Checkers Potchefstroom #258,NW,North West,Potchefstroom,1,1719,2007-01-01,OPEN
+610,STR00610,Checkers,Checkers Durban #259,KZN,KwaZulu-Natal,Durban,2,2014,2003-01-01,OPEN
+611,STR00611,Checkers,Checkers Randburg #260,GP,Gauteng,Randburg,6,1965,2001-01-01,OPEN
+612,STR00612,Checkers,Checkers Sasolburg #261,FS,Free State,Sasolburg,8,2005,2016-01-01,OPEN
+613,STR00613,Checkers,Checkers Ladysmith #262,KZN,KwaZulu-Natal,Ladysmith,2,1888,2007-01-01,OPEN
+614,STR00614,Checkers,Checkers Grahamstown #263,EC,Eastern Cape,Grahamstown,7,2118,2021-01-01,OPEN
+615,STR00615,Checkers,Checkers Port Shepstone #264,KZN,KwaZulu-Natal,Port Shepstone,2,1611,2011-01-01,OPEN
+616,STR00616,Checkers,Checkers Rustenburg #265,NW,North West,Rustenburg,1,1205,2012-01-01,OPEN
+617,STR00617,Checkers,Checkers Bloemfontein #266,FS,Free State,Bloemfontein,8,901,2004-01-01,OPEN
+618,STR00618,Checkers,Checkers Alberton #267,GP,Gauteng,Alberton,6,1699,2022-01-01,OPEN
+619,STR00619,Checkers,Checkers Grahamstown #268,EC,Eastern Cape,Grahamstown,7,2494,2017-01-01,OPEN
+620,STR00620,Checkers,Checkers Cape Town #269,WC,Western Cape,Cape Town,4,1632,2010-01-01,OPEN
+621,STR00621,Checkers,Checkers Oudtshoorn #270,WC,Western Cape,Oudtshoorn,5,1292,2024-01-01,OPEN
+622,STR00622,Checkers,Checkers Knysna #271,WC,Western Cape,Knysna,5,1819,2016-01-01,OPEN
+623,STR00623,Checkers,Checkers Alberton #272,GP,Gauteng,Alberton,6,939,2018-01-01,OPEN
+624,STR00624,Checkers,Checkers Sandton #273,GP,Gauteng,Sandton,6,1748,2018-01-01,OPEN
+625,STR00625,Checkers,Checkers Bloemfontein #274,FS,Free State,Bloemfontein,8,2192,2022-01-01,OPEN
+626,STR00626,Checkers,Checkers Alberton #275,GP,Gauteng,Alberton,6,1151,1999-01-01,OPEN
+627,STR00627,Checkers,Checkers Centurion #276,GP,Gauteng,Centurion,6,1416,2002-01-01,OPEN
+628,STR00628,Checkers,Checkers Empangeni #277,KZN,KwaZulu-Natal,Empangeni,2,1891,2006-01-01,OPEN
+629,STR00629,Checkers,Checkers Grahamstown #278,EC,Eastern Cape,Grahamstown,7,1720,2024-01-01,OPEN
+630,STR00630,Checkers,Checkers Mokopane #279,LP,Limpopo,Mokopane,1,979,2010-01-01,OPEN
+631,STR00631,Checkers,Checkers Pretoria #280,GP,Gauteng,Pretoria,1,1562,2009-01-01,OPEN
+632,STR00632,Checkers,Checkers Newcastle #281,KZN,KwaZulu-Natal,Newcastle,3,1180,2008-01-01,OPEN
+633,STR00633,Checkers,Checkers Tzaneen #282,LP,Limpopo,Tzaneen,1,1270,2001-01-01,OPEN
+634,STR00634,Checkers,Checkers Umhlanga #283,KZN,KwaZulu-Natal,Umhlanga,3,1341,2018-01-01,OPEN
+635,STR00635,Checkers,Checkers Newcastle #284,KZN,KwaZulu-Natal,Newcastle,3,2524,1998-01-01,OPEN
+636,STR00636,Checkers,Checkers Benoni #285,GP,Gauteng,Benoni,6,1696,2007-01-01,OPEN
+637,STR00637,Checkers,Checkers Ladysmith #286,KZN,KwaZulu-Natal,Ladysmith,3,2123,2005-01-01,OPEN
+638,STR00638,Checkers,Checkers Richards Bay #287,KZN,KwaZulu-Natal,Richards Bay,3,1097,2025-01-01,OPEN
+639,STR00639,Checkers,Checkers Sasolburg #288,FS,Free State,Sasolburg,8,1361,2008-01-01,OPEN
+640,STR00640,Checkers,Checkers Sandton #289,GP,Gauteng,Sandton,1,1488,2008-01-01,OPEN
+641,STR00641,Checkers,Checkers Gqeberha #290,EC,Eastern Cape,Gqeberha,7,1240,2020-01-01,OPEN
+642,STR00642,Checkers,Checkers Bloemfontein #291,FS,Free State,Bloemfontein,8,2417,2005-01-01,OPEN
+643,STR00643,Checkers,Checkers Bellville #292,WC,Western Cape,Bellville,4,1039,2020-01-01,OPEN
+644,STR00644,Checkers,Checkers Welkom #293,FS,Free State,Welkom,8,2197,2012-01-01,OPEN
+645,STR00645,Checkers,Checkers Amanzimtoti #294,KZN,KwaZulu-Natal,Amanzimtoti,3,1997,2018-01-01,OPEN
+646,STR00646,Checkers,Checkers Ladysmith #295,KZN,KwaZulu-Natal,Ladysmith,2,2038,2008-01-01,OPEN
+647,STR00647,Checkers,Checkers Grahamstown #296,EC,Eastern Cape,Grahamstown,7,1565,2003-01-01,OPEN
+648,STR00648,Checkers,Checkers Sandton #297,GP,Gauteng,Sandton,6,2295,2024-01-01,OPEN
+649,STR00649,Checkers,Checkers Bellville #298,WC,Western Cape,Bellville,5,1731,2001-01-01,OPEN
+650,STR00650,Checkers,Checkers Potchefstroom #299,NW,North West,Potchefstroom,8,1654,2017-01-01,OPEN
+651,STR00651,Checkers,Checkers Johannesburg #300,GP,Gauteng,Johannesburg,1,1588,1999-01-01,OPEN
+652,STR00652,Checkers,Checkers Ladysmith #301,KZN,KwaZulu-Natal,Ladysmith,2,1531,2017-01-01,OPEN
+653,STR00653,Checkers,Checkers Benoni #302,GP,Gauteng,Benoni,6,1529,2006-01-01,OPEN
+654,STR00654,Checkers,Checkers Umhlanga #303,KZN,KwaZulu-Natal,Umhlanga,3,1630,2022-01-01,OPEN
+655,STR00655,Checkers,Checkers Vereeniging #304,GP,Gauteng,Vereeniging,6,2398,2021-01-01,OPEN
+656,STR00656,Checkers,Checkers Nelspruit #305,MP,Mpumalanga,Nelspruit,6,2516,2025-01-01,OPEN
+657,STR00657,Checkers,Checkers Amanzimtoti #306,KZN,KwaZulu-Natal,Amanzimtoti,3,2338,2023-01-01,OPEN
+658,STR00658,Checkers,Checkers Klerksdorp #307,NW,North West,Klerksdorp,8,1432,2007-01-01,OPEN
+659,STR00659,Checkers,Checkers Nelspruit #308,MP,Mpumalanga,Nelspruit,1,1582,2005-01-01,OPEN
+660,STR00660,Checkers,Checkers Umhlanga #309,KZN,KwaZulu-Natal,Umhlanga,2,1299,2001-01-01,OPEN
+661,STR00661,Checkers,Checkers Pietermaritzburg #310,KZN,KwaZulu-Natal,Pietermaritzburg,3,2512,2000-01-01,OPEN
+662,STR00662,Checkers,Checkers Queenstown #311,EC,Eastern Cape,Queenstown,7,1967,2017-01-01,OPEN
+663,STR00663,Checkers,Checkers Rustenburg #312,NW,North West,Rustenburg,8,1950,2013-01-01,OPEN
+664,STR00664,Checkers,Checkers Port Shepstone #313,KZN,KwaZulu-Natal,Port Shepstone,2,1039,2009-01-01,OPEN
+665,STR00665,Checkers,Checkers Sasolburg #314,FS,Free State,Sasolburg,8,1873,2004-01-01,OPEN
+666,STR00666,Checkers,Checkers Sandton #315,GP,Gauteng,Sandton,6,1547,2019-01-01,OPEN
+667,STR00667,Checkers,Checkers Pretoria #316,GP,Gauteng,Pretoria,1,1811,2020-01-01,OPEN
+668,STR00668,Checkers,Checkers Somerset West #317,WC,Western Cape,Somerset West,5,1335,2008-01-01,OPEN
+669,STR00669,Checkers,Checkers Grahamstown #318,EC,Eastern Cape,Grahamstown,7,1002,2001-01-01,OPEN
+670,STR00670,Checkers,Checkers Ladysmith #319,KZN,KwaZulu-Natal,Ladysmith,2,1770,2019-01-01,OPEN
+671,STR00671,Checkers,Checkers Amanzimtoti #320,KZN,KwaZulu-Natal,Amanzimtoti,3,1681,2013-01-01,OPEN
+672,STR00672,Checkers,Checkers Benoni #321,GP,Gauteng,Benoni,6,2420,2010-01-01,OPEN
+673,STR00673,Checkers,Checkers Polokwane #322,LP,Limpopo,Polokwane,1,1535,2005-01-01,OPEN
+674,STR00674,Checkers,Checkers Sandton #323,GP,Gauteng,Sandton,6,2103,2017-01-01,OPEN
+675,STR00675,Checkers,Checkers Empangeni #324,KZN,KwaZulu-Natal,Empangeni,3,1436,2008-01-01,OPEN
+676,STR00676,Checkers,Checkers Alberton #325,GP,Gauteng,Alberton,1,975,2001-01-01,OPEN
+677,STR00677,Checkers,Checkers Benoni #326,GP,Gauteng,Benoni,6,1366,2016-01-01,OPEN
+678,STR00678,Checkers,Checkers Boksburg #327,GP,Gauteng,Boksburg,1,2351,2008-01-01,OPEN
+679,STR00679,Checkers,Checkers Vereeniging #328,GP,Gauteng,Vereeniging,1,2117,2011-01-01,OPEN
+680,STR00680,Checkers,Checkers Mthatha #329,EC,Eastern Cape,Mthatha,7,1248,2018-01-01,OPEN
+681,STR00681,Usave,Usave Hermanus #100,WC,Western Cape,Hermanus,5,514,2007-01-01,OPEN
+682,STR00682,Usave,Usave Ladysmith #101,KZN,KwaZulu-Natal,Ladysmith,3,474,2003-01-01,OPEN
+683,STR00683,Usave,Usave Newcastle #102,KZN,KwaZulu-Natal,Newcastle,3,418,2018-01-01,OPEN
+684,STR00684,Usave,Usave Grahamstown #103,EC,Eastern Cape,Grahamstown,7,314,2014-01-01,OPEN
+685,STR00685,Usave,Usave East London #104,EC,Eastern Cape,East London,7,323,2000-01-01,OPEN
+686,STR00686,Usave,Usave Hermanus #105,WC,Western Cape,Hermanus,5,561,2019-01-01,OPEN
+687,STR00687,Usave,Usave Witbank #106,MP,Mpumalanga,Witbank,1,403,2014-01-01,OPEN
+688,STR00688,Usave,Usave Pietermaritzburg #107,KZN,KwaZulu-Natal,Pietermaritzburg,3,486,1998-01-01,OPEN
+689,STR00689,Usave,Usave Mokopane #108,LP,Limpopo,Mokopane,1,418,2023-01-01,OPEN
+690,STR00690,Usave,Usave Kempton Park #109,GP,Gauteng,Kempton Park,6,355,2011-01-01,OPEN
+691,STR00691,Usave,Usave Port Shepstone #110,KZN,KwaZulu-Natal,Port Shepstone,2,450,2014-01-01,OPEN
+692,STR00692,Usave,Usave Alberton #111,GP,Gauteng,Alberton,1,361,2018-01-01,OPEN
+693,STR00693,Usave,Usave Kempton Park #112,GP,Gauteng,Kempton Park,6,472,2025-01-01,OPEN
+694,STR00694,Usave,Usave Umhlanga #113,KZN,KwaZulu-Natal,Umhlanga,2,562,2013-01-01,OPEN
+695,STR00695,Usave,Usave Middelburg #114,MP,Mpumalanga,Middelburg,1,422,2016-01-01,OPEN
+696,STR00696,Usave,Usave Alberton #115,GP,Gauteng,Alberton,1,566,2019-01-01,OPEN
+697,STR00697,Usave,Usave Polokwane #116,LP,Limpopo,Polokwane,1,477,2012-01-01,OPEN
+698,STR00698,Usave,Usave Ladysmith #117,KZN,KwaZulu-Natal,Ladysmith,3,325,2015-01-01,OPEN
+699,STR00699,Usave,Usave Ermelo #118,MP,Mpumalanga,Ermelo,6,356,2005-01-01,OPEN
+700,STR00700,Usave,Usave Bloemfontein #119,FS,Free State,Bloemfontein,8,571,2024-01-01,OPEN
+701,STR00701,Usave,Usave Queenstown #120,EC,Eastern Cape,Queenstown,7,487,2021-01-01,OPEN
+702,STR00702,Usave,Usave Soweto #121,GP,Gauteng,Soweto,6,314,2019-01-01,OPEN
+703,STR00703,Usave,Usave Bellville #122,WC,Western Cape,Bellville,4,544,2005-01-01,OPEN
+704,STR00704,Usave,Usave Bloemfontein #123,FS,Free State,Bloemfontein,8,377,2025-01-01,OPEN
+705,STR00705,Usave,Usave Amanzimtoti #124,KZN,KwaZulu-Natal,Amanzimtoti,3,318,2018-01-01,OPEN
+706,STR00706,Usave,Usave Nelspruit #125,MP,Mpumalanga,Nelspruit,6,374,2021-01-01,OPEN
+707,STR00707,Usave,Usave Hermanus #126,WC,Western Cape,Hermanus,4,417,2024-01-01,OPEN
+708,STR00708,Usave,Usave Port Shepstone #127,KZN,KwaZulu-Natal,Port Shepstone,2,312,1999-01-01,OPEN
+709,STR00709,Usave,Usave Paarl #128,WC,Western Cape,Paarl,4,403,2004-01-01,OPEN
+710,STR00710,Usave,Usave Uitenhage #129,EC,Eastern Cape,Uitenhage,7,285,2008-01-01,OPEN
+711,STR00711,Usave,Usave Tzaneen #130,LP,Limpopo,Tzaneen,1,444,2022-01-01,OPEN
+712,STR00712,Usave,Usave Bellville #131,WC,Western Cape,Bellville,5,361,2020-01-01,OPEN
+713,STR00713,Usave,Usave Oudtshoorn #132,WC,Western Cape,Oudtshoorn,5,375,2004-01-01,OPEN
+714,STR00714,Usave,Usave Cape Town #133,WC,Western Cape,Cape Town,4,570,2008-01-01,OPEN
+715,STR00715,Usave,Usave Pietermaritzburg #134,KZN,KwaZulu-Natal,Pietermaritzburg,3,437,2018-01-01,OPEN
+716,STR00716,Usave,Usave Tzaneen #135,LP,Limpopo,Tzaneen,1,294,2018-01-01,OPEN
+717,STR00717,Usave,Usave Knysna #136,WC,Western Cape,Knysna,5,372,2016-01-01,OPEN
+718,STR00718,Usave,Usave Ladysmith #137,KZN,KwaZulu-Natal,Ladysmith,2,427,2023-01-01,OPEN
+719,STR00719,Usave,Usave Secunda #138,MP,Mpumalanga,Secunda,1,398,2005-01-01,OPEN
+720,STR00720,Usave,Usave Somerset West #139,WC,Western Cape,Somerset West,4,318,2024-01-01,OPEN
+721,STR00721,Usave,Usave Newcastle #140,KZN,KwaZulu-Natal,Newcastle,2,498,2003-01-01,OPEN
+722,STR00722,Usave,Usave Hermanus #141,WC,Western Cape,Hermanus,4,554,2011-01-01,OPEN
+723,STR00723,Usave,Usave Upington #142,NC,Northern Cape,Upington,4,252,2008-01-01,OPEN
+724,STR00724,Usave,Usave Tzaneen #143,LP,Limpopo,Tzaneen,1,516,2000-01-01,OPEN
+725,STR00725,Usave,Usave Worcester #144,WC,Western Cape,Worcester,5,285,2024-01-01,OPEN
+726,STR00726,Usave,Usave Gqeberha #145,EC,Eastern Cape,Gqeberha,7,267,2001-01-01,OPEN
+727,STR00727,Usave,Usave Ladysmith #146,KZN,KwaZulu-Natal,Ladysmith,3,574,2004-01-01,OPEN
+728,STR00728,Usave,Usave Knysna #147,WC,Western Cape,Knysna,5,385,1999-01-01,OPEN
+729,STR00729,Usave,Usave Rustenburg #148,NW,North West,Rustenburg,1,346,2019-01-01,OPEN
+730,STR00730,Usave,Usave Richards Bay #149,KZN,KwaZulu-Natal,Richards Bay,2,501,2004-01-01,OPEN
+731,STR00731,Usave,Usave Benoni #150,GP,Gauteng,Benoni,1,464,2004-01-01,OPEN
+732,STR00732,Usave,Usave Worcester #151,WC,Western Cape,Worcester,4,574,2006-01-01,OPEN
+733,STR00733,Usave,Usave Gqeberha #152,EC,Eastern Cape,Gqeberha,7,520,2022-01-01,OPEN
+734,STR00734,Usave,Usave Umhlanga #153,KZN,KwaZulu-Natal,Umhlanga,3,261,2016-01-01,OPEN
+735,STR00735,Usave,Usave Knysna #154,WC,Western Cape,Knysna,4,503,2010-01-01,OPEN
+736,STR00736,Usave,Usave Midrand #155,GP,Gauteng,Midrand,1,338,2003-01-01,OPEN
+737,STR00737,Usave,Usave Port Shepstone #156,KZN,KwaZulu-Natal,Port Shepstone,3,482,2022-01-01,OPEN
+738,STR00738,Usave,Usave Kempton Park #157,GP,Gauteng,Kempton Park,6,429,2001-01-01,OPEN
+739,STR00739,Usave,Usave Middelburg #158,MP,Mpumalanga,Middelburg,1,525,2021-01-01,OPEN
+740,STR00740,Usave,Usave Secunda #159,MP,Mpumalanga,Secunda,1,313,2012-01-01,OPEN
+741,STR00741,Usave,Usave Johannesburg #160,GP,Gauteng,Johannesburg,1,578,2011-01-01,OPEN
+742,STR00742,Usave,Usave Bloemfontein #161,FS,Free State,Bloemfontein,8,446,2024-01-01,OPEN
+743,STR00743,Usave,Usave Nelspruit #162,MP,Mpumalanga,Nelspruit,6,353,2007-01-01,OPEN
+744,STR00744,Usave,Usave Thohoyandou #163,LP,Limpopo,Thohoyandou,1,355,2015-01-01,OPEN
+745,STR00745,Usave,Usave Port Shepstone #164,KZN,KwaZulu-Natal,Port Shepstone,3,363,2021-01-01,OPEN
+746,STR00746,Usave,Usave Centurion #165,GP,Gauteng,Centurion,6,493,2012-01-01,OPEN
+747,STR00747,Usave,Usave Pretoria #166,GP,Gauteng,Pretoria,6,369,2020-01-01,OPEN
+748,STR00748,Usave,Usave Midrand #167,GP,Gauteng,Midrand,1,307,2009-01-01,OPEN
+749,STR00749,Usave,Usave Johannesburg #168,GP,Gauteng,Johannesburg,6,345,2015-01-01,OPEN
+750,STR00750,Usave,Usave Randburg #169,GP,Gauteng,Randburg,1,385,2023-01-01,OPEN
+751,STR00751,Usave,Usave Centurion #170,GP,Gauteng,Centurion,1,284,2018-01-01,OPEN
+752,STR00752,Usave,Usave Nelspruit #171,MP,Mpumalanga,Nelspruit,1,562,1999-01-01,OPEN
+753,STR00753,Usave,Usave Uitenhage #172,EC,Eastern Cape,Uitenhage,7,486,2002-01-01,OPEN
+754,STR00754,Usave,Usave Pretoria #173,GP,Gauteng,Pretoria,6,260,1999-01-01,OPEN
+755,STR00755,Usave,Usave Queenstown #174,EC,Eastern Cape,Queenstown,7,552,2024-01-01,OPEN
+756,STR00756,Usave,Usave Grahamstown #175,EC,Eastern Cape,Grahamstown,7,360,2003-01-01,OPEN
+757,STR00757,Usave,Usave Vereeniging #176,GP,Gauteng,Vereeniging,1,579,2000-01-01,OPEN
+758,STR00758,Usave,Usave Alberton #177,GP,Gauteng,Alberton,6,565,2007-01-01,OPEN
+759,STR00759,Usave,Usave Sandton #178,GP,Gauteng,Sandton,1,391,2015-01-01,OPEN
+760,STR00760,Usave,Usave Thohoyandou #179,LP,Limpopo,Thohoyandou,1,327,2021-01-01,OPEN
+761,STR00761,Checkers Hyper,Checkers Hyper Oudtshoorn #100,WC,Western Cape,Oudtshoorn,5,5166,2004-01-01,OPEN
+762,STR00762,Checkers Hyper,Checkers Hyper Pretoria #101,GP,Gauteng,Pretoria,6,5531,2024-01-01,OPEN
+763,STR00763,Checkers Hyper,Checkers Hyper Paarl #102,WC,Western Cape,Paarl,4,4686,1998-01-01,OPEN
+764,STR00764,Checkers Hyper,Checkers Hyper Sandton #103,GP,Gauteng,Sandton,1,5217,2001-01-01,OPEN
+765,STR00765,Checkers Hyper,Checkers Hyper Johannesburg #104,GP,Gauteng,Johannesburg,1,4288,2007-01-01,OPEN
+766,STR00766,Checkers Hyper,Checkers Hyper Bellville #105,WC,Western Cape,Bellville,5,6316,2010-01-01,OPEN
+767,STR00767,Checkers Hyper,Checkers Hyper Johannesburg #106,GP,Gauteng,Johannesburg,6,4111,2015-01-01,OPEN
+768,STR00768,Checkers Hyper,Checkers Hyper Cape Town #107,WC,Western Cape,Cape Town,4,4120,2022-01-01,OPEN
+769,STR00769,Checkers Hyper,Checkers Hyper Kempton Park #108,GP,Gauteng,Kempton Park,6,4468,2010-01-01,OPEN
+770,STR00770,Checkers Hyper,Checkers Hyper Witbank #109,MP,Mpumalanga,Witbank,6,3787,2016-01-01,OPEN
+771,STR00771,Checkers Hyper,Checkers Hyper Hermanus #110,WC,Western Cape,Hermanus,5,5889,1998-01-01,OPEN
+772,STR00772,Checkers Hyper,Checkers Hyper Benoni #111,GP,Gauteng,Benoni,6,5977,2008-01-01,OPEN
+773,STR00773,Checkers Hyper,Checkers Hyper Benoni #112,GP,Gauteng,Benoni,1,4496,2002-01-01,OPEN
+774,STR00774,Checkers Hyper,Checkers Hyper Cape Town #113,WC,Western Cape,Cape Town,4,5389,2004-01-01,OPEN
+775,STR00775,Checkers Hyper,Checkers Hyper Umhlanga #114,KZN,KwaZulu-Natal,Umhlanga,2,3641,2018-01-01,OPEN
+776,STR00776,Checkers Hyper,Checkers Hyper Bellville #115,WC,Western Cape,Bellville,4,3947,2004-01-01,OPEN
+777,STR00777,Checkers Hyper,Checkers Hyper Durban #116,KZN,KwaZulu-Natal,Durban,3,5586,2013-01-01,OPEN
+778,STR00778,Checkers Hyper,Checkers Hyper Secunda #117,MP,Mpumalanga,Secunda,6,4083,2003-01-01,OPEN
+779,STR00779,Checkers Hyper,Checkers Hyper Randburg #118,GP,Gauteng,Randburg,6,6407,2022-01-01,OPEN
+780,STR00780,Checkers Hyper,Checkers Hyper Kempton Park #119,GP,Gauteng,Kempton Park,6,3958,2013-01-01,OPEN
+781,STR00781,LiquorShop,LiquorShop Vereeniging #100,GP,Gauteng,Vereeniging,1,356,2000-01-01,OPEN
+782,STR00782,LiquorShop,LiquorShop Newcastle #101,KZN,KwaZulu-Natal,Newcastle,1,215,2007-01-01,OPEN
+783,STR00783,LiquorShop,LiquorShop Sandton #102,GP,Gauteng,Sandton,1,361,2005-01-01,OPEN
+784,STR00784,LiquorShop,LiquorShop East London #103,EC,Eastern Cape,East London,1,197,2009-01-01,OPEN
+785,STR00785,LiquorShop,LiquorShop Johannesburg #104,GP,Gauteng,Johannesburg,1,186,2008-01-01,OPEN
+786,STR00786,LiquorShop,LiquorShop Kempton Park #105,GP,Gauteng,Kempton Park,1,171,2002-01-01,OPEN
+787,STR00787,LiquorShop,LiquorShop Mokopane #106,LP,Limpopo,Mokopane,1,228,2021-01-01,OPEN
+788,STR00788,LiquorShop,LiquorShop Welkom #107,FS,Free State,Welkom,1,246,2017-01-01,OPEN
+789,STR00789,LiquorShop,LiquorShop Roodepoort #108,GP,Gauteng,Roodepoort,1,314,2018-01-01,OPEN
+790,STR00790,LiquorShop,LiquorShop Stellenbosch #109,WC,Western Cape,Stellenbosch,5,386,2002-01-01,OPEN
+791,STR00791,LiquorShop,LiquorShop Newcastle #110,KZN,KwaZulu-Natal,Newcastle,1,304,2024-01-01,OPEN
+792,STR00792,LiquorShop,LiquorShop Somerset West #111,WC,Western Cape,Somerset West,5,184,2006-01-01,OPEN
+793,STR00793,LiquorShop,LiquorShop Mokopane #112,LP,Limpopo,Mokopane,1,178,2010-01-01,OPEN
+794,STR00794,LiquorShop,LiquorShop Pretoria #113,GP,Gauteng,Pretoria,1,297,2019-01-01,OPEN
+795,STR00795,LiquorShop,LiquorShop Sandton #114,GP,Gauteng,Sandton,1,356,2011-01-01,OPEN
+796,STR00796,LiquorShop,LiquorShop Amanzimtoti #115,KZN,KwaZulu-Natal,Amanzimtoti,1,337,2017-01-01,OPEN
+797,STR00797,LiquorShop,LiquorShop Kroonstad #116,FS,Free State,Kroonstad,1,272,2015-01-01,OPEN
+798,STR00798,LiquorShop,LiquorShop Paarl #117,WC,Western Cape,Paarl,5,204,2012-01-01,OPEN
+799,STR00799,LiquorShop,LiquorShop Cape Town #118,WC,Western Cape,Cape Town,5,278,2014-01-01,OPEN
+800,STR00800,LiquorShop,LiquorShop Centurion #119,GP,Gauteng,Centurion,1,156,2014-01-01,OPEN
+801,STR00801,LiquorShop,LiquorShop Queenstown #120,EC,Eastern Cape,Queenstown,1,292,2000-01-01,OPEN
+802,STR00802,LiquorShop,LiquorShop Rustenburg #121,NW,North West,Rustenburg,1,275,2007-01-01,OPEN
+803,STR00803,LiquorShop,LiquorShop Pietermaritzburg #122,KZN,KwaZulu-Natal,Pietermaritzburg,1,261,2007-01-01,OPEN
+804,STR00804,LiquorShop,LiquorShop Midrand #123,GP,Gauteng,Midrand,1,338,2021-01-01,OPEN
+805,STR00805,LiquorShop,LiquorShop Bethlehem #124,FS,Free State,Bethlehem,1,305,2021-01-01,OPEN
+806,STR00806,LiquorShop,LiquorShop Ladysmith #125,KZN,KwaZulu-Natal,Ladysmith,1,400,2005-01-01,OPEN
+807,STR00807,LiquorShop,LiquorShop Vereeniging #126,GP,Gauteng,Vereeniging,1,261,2006-01-01,OPEN
+808,STR00808,LiquorShop,LiquorShop Hermanus #127,WC,Western Cape,Hermanus,5,190,2001-01-01,OPEN
+809,STR00809,LiquorShop,LiquorShop Randburg #128,GP,Gauteng,Randburg,1,220,2011-01-01,OPEN
+810,STR00810,LiquorShop,LiquorShop Sandton #129,GP,Gauteng,Sandton,1,166,2003-01-01,OPEN
+811,STR00811,PetShop Science,PetShop Science Boksburg #100,GP,Gauteng,Boksburg,6,370,2002-01-01,OPEN
+812,STR00812,PetShop Science,PetShop Science Middelburg #101,MP,Mpumalanga,Middelburg,6,180,2004-01-01,OPEN
+813,STR00813,PetShop Science,PetShop Science Bloemfontein #102,FS,Free State,Bloemfontein,8,185,1998-01-01,OPEN
+814,STR00814,PetShop Science,PetShop Science Umhlanga #103,KZN,KwaZulu-Natal,Umhlanga,3,383,2007-01-01,OPEN
+815,STR00815,PetShop Science,PetShop Science Uitenhage #104,EC,Eastern Cape,Uitenhage,7,241,2016-01-01,OPEN
+816,STR00816,PetShop Science,PetShop Science Johannesburg #105,GP,Gauteng,Johannesburg,1,312,2014-01-01,OPEN
+817,STR00817,PetShop Science,PetShop Science Pietermaritzburg #106,KZN,KwaZulu-Natal,Pietermaritzburg,2,244,2001-01-01,OPEN
+818,STR00818,PetShop Science,PetShop Science Cape Town #107,WC,Western Cape,Cape Town,4,328,2025-01-01,OPEN
+819,STR00819,PetShop Science,PetShop Science Ermelo #108,MP,Mpumalanga,Ermelo,6,372,2021-01-01,OPEN
+820,STR00820,PetShop Science,PetShop Science Richards Bay #109,KZN,KwaZulu-Natal,Richards Bay,2,355,2013-01-01,OPEN

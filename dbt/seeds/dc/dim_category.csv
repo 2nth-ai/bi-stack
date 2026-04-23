@@ -1,0 +1,19 @@
+category_id,category_name,default_zone
+1,Dry Groceries,AMBIENT
+2,Bakery & Cereals,AMBIENT
+3,Dairy & Chilled,CHILLED
+4,Frozen Foods,FROZEN
+5,Beverages Non-Alcoholic,AMBIENT
+6,Beverages Alcoholic,AMBIENT
+7,Confectionery & Snacks,AMBIENT
+8,Personal Care,AMBIENT
+9,Household Cleaning,AMBIENT
+10,Baby Care,AMBIENT
+11,Pet Food,AMBIENT
+12,Health & Beauty,AMBIENT
+13,Pharmacy & Healthcare,AMBIENT
+14,Tobacco,AMBIENT
+15,Stationery,AMBIENT
+16,General Merchandise,AMBIENT
+17,Deli & Prepared,CHILLED
+18,Fresh Produce Bulk,AMBIENT
