@@ -436,6 +436,40 @@
 
     <p>Headline numbers at the time of writing: <strong>R14.0&nbsp;bn</strong> of stock on hand across 8 DCs, <strong>R25.8&nbsp;bn</strong> of 28-day outbound value, 52&ndash;72&nbsp;% utilisation across the DC network.</p>
 
+    <h3>Neon compute topology &mdash; read replica split</h3>
+    <p>One Neon branch, two compute endpoints: a primary (read-write) and a read replica (read-only). Neon replicas are physical-replication standbys, not logical snapshots &mdash; they auto-follow the primary within seconds and share the same credentials.</p>
+
+    <table>
+      <thead><tr><th>URI</th><th>Endpoint role</th><th>Used by</th></tr></thead>
+      <tbody>
+        <tr><td><code>SUPERSET_METADATA_DB_URI</code></td><td><strong>Primary</strong> direct</td><td>Superset metadata &mdash; must write (sessions, dashboards, alembic).</td></tr>
+        <tr><td><code>ANALYTICS_DB_URI</code></td><td><strong>Read replica</strong> direct</td><td>Dashboard queries from the Superset UI &mdash; all SELECT, offloaded from primary.</td></tr>
+        <tr><td><code>NEON_POOLED_URI</code></td><td><strong>Primary</strong> pooled</td><td>dbt &mdash; writes mart tables; needs primary.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>How to point at the replica.</strong> Neon replicas share the same user/password as the primary branch; only the endpoint ID (the <code>ep-&hellip;</code> prefix) differs. Given a primary URI, the replica URI is a literal string-swap of the endpoint ID.
+    </div>
+
+    <pre><code># Compose the replica URI from the primary .env entry
+PRIMARY=$(grep '^ANALYTICS_DB_URI=' .env | cut -d= -f2-)
+REPLICA="${PRIMARY//ep-round-darkness-al74ipg9/ep-wandering-surf-alua3k5t}"
+
+# Push to Secret Manager
+printf '%s' "$REPLICA" | gcloud secrets versions add ANALYTICS_DB_URI \
+  --project=nth-bi-stack --data-file=-
+
+# Update the stored connection inside Superset (URI lives in Superset's own
+# metadata DB, encrypted &mdash; Secret Manager is only consulted at bootstrap).
+# One-shot via the admin API:
+curl -X PUT "$BASE/api/v1/database/$DB_ID" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d "{\"sqlalchemy_uri\": \"$REPLICA\"}"</code></pre>
+
+    <p>Query traffic now splits: Superset metadata (low-volume, bursty writes) on primary; dashboard queries (large SELECTs) on replica. Primary CPU/IOPS freed up for dbt builds and Superset internal operations.</p>
+
     <h3>dbt DAG (retail DC domain)</h3>
     <figure>
       <svg class="arch" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" aria-label="retail dc dbt DAG">
@@ -756,7 +790,7 @@ gcloud run services add-iam-policy-binding bi-superset-web \
       <thead><tr><th>Secret</th><th>What goes in it</th><th>Used by</th></tr></thead>
       <tbody>
         <tr><td><code>SUPERSET_METADATA_DB_URI</code></td><td>Direct (unpooled) Neon URI, <code>postgresql+psycopg2://</code></td><td>Superset web (SQLAlchemy)</td></tr>
-        <tr><td><code>ANALYTICS_DB_URI</code></td><td>Direct Neon URI, plain <code>postgresql://</code></td><td>Registered inside Superset UI as a warehouse connection</td></tr>
+        <tr><td><code>ANALYTICS_DB_URI</code></td><td>Direct Neon URI, plain <code>postgresql://</code>. Points at the <strong>read replica</strong> endpoint, not primary &mdash; see "Neon compute topology" above.</td><td>Registered inside Superset UI as a warehouse connection</td></tr>
         <tr><td><code>NEON_POOLED_URI</code></td><td>Pooled Neon URI (has <code>-pooler</code> in host)</td><td>dbt (short-lived connections)</td></tr>
         <tr><td><code>REDIS_URL</code></td><td>Upstash <code>rediss://default:&hellip;@&hellip;.upstash.io:6379?ssl_cert_reqs=CERT_REQUIRED</code></td><td>Superset cache; Celery broker/backend</td></tr>
         <tr><td><code>SUPERSET_SECRET_KEY</code></td><td>42-byte base64 (openssl rand)</td><td>Flask session signing &amp; cookie HMAC</td></tr>
