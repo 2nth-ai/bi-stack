@@ -805,7 +805,7 @@ gcloud run services add-iam-policy-binding bi-superset-web \
     <h3>Observability</h3>
     <ul>
       <li><strong>Logs:</strong> Cloud Logging. All Cloud Run stdout/stderr lands under <code>resource.type="cloud_run_revision"</code>. Useful filters: <code>severity&gt;=ERROR</code>, <code>resource.labels.service_name="bi-superset-web"</code>.</li>
-      <li><strong>Metrics:</strong> Cloud Monitoring auto-populates request count, request latency, container CPU, container memory for each Cloud Run revision. Dashboard at <code>console.cloud.google.com/monitoring/services</code>.</li>
+      <li><strong>Metrics:</strong> Cloud Monitoring auto-populates request count, request latency, container CPU, container memory for each Cloud Run revision.</li>
       <li><strong>LB metrics:</strong> separate set under "Network services" &mdash; backend latency split between request arrival, LB time, backend time.</li>
       <li><strong>Audit:</strong> IAM and admin activity on the project go to the auto-enabled <code>cloudaudit.googleapis.com</code> log.</li>
     </ul>
@@ -813,6 +813,28 @@ gcloud run services add-iam-policy-binding bi-superset-web \
 gcloud logging tail \
   'resource.type="cloud_run_revision" AND resource.labels.service_name="bi-superset-web" AND severity&gt;=WARNING' \
   --project=nth-bi-stack</code></pre>
+
+    <h3>Console shortcuts</h3>
+    <p>Direct links into the GCP console for the <code>nth-bi-stack</code> project. Replace the project name in each URL if you&rsquo;re using a different project.</p>
+    <table>
+      <thead><tr><th>Page</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>Cloud Run service list</td><td><code>https://console.cloud.google.com/run?project=nth-bi-stack</code></td></tr>
+        <tr><td><code>bi-superset-web</code> metrics &amp; revisions</td><td><code>https://console.cloud.google.com/run/detail/africa-south1/bi-superset-web/metrics?project=nth-bi-stack</code></td></tr>
+        <tr><td><code>bi-superset-web</code> logs</td><td><code>https://console.cloud.google.com/run/detail/africa-south1/bi-superset-web/logs?project=nth-bi-stack</code></td></tr>
+        <tr><td>Log Explorer (all logs, filterable)</td><td><code>https://console.cloud.google.com/logs?project=nth-bi-stack</code></td></tr>
+        <tr><td>Cloud Monitoring</td><td><code>https://console.cloud.google.com/monitoring?project=nth-bi-stack</code></td></tr>
+        <tr><td>Compute Engine VMs</td><td><code>https://console.cloud.google.com/compute/instances?project=nth-bi-stack</code></td></tr>
+        <tr><td>Artifact Registry</td><td><code>https://console.cloud.google.com/artifacts?project=nth-bi-stack</code></td></tr>
+        <tr><td>Secret Manager</td><td><code>https://console.cloud.google.com/security/secret-manager?project=nth-bi-stack</code></td></tr>
+        <tr><td>IAM &amp; admin</td><td><code>https://console.cloud.google.com/iam-admin/iam?project=nth-bi-stack</code></td></tr>
+        <tr><td>Service accounts</td><td><code>https://console.cloud.google.com/iam-admin/serviceaccounts?project=nth-bi-stack</code></td></tr>
+        <tr><td>Cloud Scheduler</td><td><code>https://console.cloud.google.com/cloudscheduler?project=nth-bi-stack</code></td></tr>
+        <tr><td>Billing &amp; spend</td><td><code>https://console.cloud.google.com/billing/linkedaccount?project=nth-bi-stack</code></td></tr>
+        <tr><td>Org policies</td><td><code>https://console.cloud.google.com/iam-admin/orgpolicies/list?project=nth-bi-stack</code></td></tr>
+        <tr><td>Load Balancers (when LB is up)</td><td><code>https://console.cloud.google.com/net-services/loadbalancing/list/loadBalancers?project=nth-bi-stack</code></td></tr>
+      </tbody>
+    </table>
 
     <h3>Teardown</h3>
     <p>Two paths.</p>
