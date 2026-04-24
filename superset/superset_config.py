@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import os
 from datetime import timedelta
+from urllib.parse import urlparse
 
 from cachelib.redis import RedisCache
 
@@ -59,10 +60,18 @@ DATA_CACHE_CONFIG = {**CACHE_CONFIG, "CACHE_KEY_PREFIX": "superset_data_"}
 FILTER_STATE_CACHE_CONFIG = {**CACHE_CONFIG, "CACHE_KEY_PREFIX": "superset_filter_"}
 EXPLORE_FORM_DATA_CACHE_CONFIG = {**CACHE_CONFIG, "CACHE_KEY_PREFIX": "superset_explore_"}
 
+# Parse REDIS_URL with urllib so query params (e.g. ?ssl_cert_reqs=CERT_REQUIRED
+# required by Upstash rediss://) and default ports are handled properly.
+_REDIS = urlparse(REDIS_URL)
+_REDIS_SSL_KWARGS = (
+    {"ssl": True, "ssl_cert_reqs": "required"} if _REDIS.scheme == "rediss" else {}
+)
 RESULTS_BACKEND = RedisCache(
-    host=REDIS_URL.replace("redis://", "").split(":")[0],
-    port=int(REDIS_URL.rsplit(":", 1)[-1].split("/")[0]) if ":" in REDIS_URL else 6379,
+    host=_REDIS.hostname or "redis",
+    port=_REDIS.port or 6379,
+    password=_REDIS.password,
     key_prefix="superset_results",
+    **_REDIS_SSL_KWARGS,
 )
 
 
