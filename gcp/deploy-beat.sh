@@ -15,6 +15,6 @@ gcloud run deploy bi-superset-beat \
   --max-instances 1 \
   --no-cpu-throttling \
   --command celery \
-  --args='--app=superset.tasks.celery_app:app,beat,--loglevel=INFO' \
+  --args='--app=superset.tasks.celery_app:app,beat,--loglevel=INFO,--schedule=/tmp/celerybeat-schedule' \
   --set-env-vars "SUPERSET_CONFIG_PATH=/app/pythonpath/superset_config.py" \
   --set-secrets "SUPERSET_METADATA_DB_URI=${SEC_METADATA_URI}:latest,REDIS_URL=${SEC_REDIS_URL}:latest,SUPERSET_SECRET_KEY=${SEC_SUPERSET_KEY}:latest,GUEST_TOKEN_JWT_SECRET=${SEC_GUEST_JWT}:latest"
