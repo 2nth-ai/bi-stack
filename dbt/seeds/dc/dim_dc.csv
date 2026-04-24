@@ -1,0 +1,9 @@
+dc_id,dc_code,dc_name,city,province,region,zones,capacity_pallets,temp_profile
+1,CIL,Cilmor DC,Centurion,GP,INLAND,AMBIENT|CHILLED|FROZEN,65000,MULTI
+2,CAN,Canelands DC,Verulam,KZN,COASTAL,AMBIENT|CHILLED,42000,MULTI
+3,BAS,Basfour DC,Pinetown,KZN,COASTAL,AMBIENT,38000,AMBIENT
+4,MON,Montague Gardens DC,Montague Gardens,WC,COASTAL,AMBIENT|CHILLED|FROZEN,52000,MULTI
+5,BRL,Brackenfell Liquor DC,Brackenfell,WC,COASTAL,AMBIENT,18000,AMBIENT
+6,MID,Midrand DC,Midrand,GP,INLAND,AMBIENT|CHILLED,36000,MULTI
+7,ELN,East London DC,East London,EC,COASTAL,AMBIENT,14000,AMBIENT
+8,BFN,Bloemfontein DC,Bloemfontein,FS,INLAND,AMBIENT|CHILLED,16000,MULTI

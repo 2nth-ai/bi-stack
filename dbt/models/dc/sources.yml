@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: retail_dc_raw
+    description: Raw tables loaded via psycopg2 COPY (outside dbt) because dbt seed is too slow for >100k rows over Neon.
+    schema: analytics_retail_dc
+    tables:
+      - name: raw_stock_movements
+        description: 60 days of inbound + outbound DC movements, loaded from scripts/out/fct_stock_movements.csv
+        columns:
+          - name: movement_id
+            tests: [unique, not_null]
+          - name: movement_date
+            tests: [not_null]
+          - name: movement_type
+            tests:
+              - not_null
+              - accepted_values: { values: ['INBOUND', 'OUTBOUND'] }
+          - name: dc_id
+            tests: [not_null]
+          - name: sku_id
+            tests: [not_null]
+          - name: qty_cases
+            tests: [not_null]

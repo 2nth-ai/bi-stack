@@ -25,6 +25,12 @@ models:
     marts:
       +materialized: table
       +schema: analytics
+    dc:
+      +schema: retail_dc
+      staging:
+        +materialized: view
+      marts:
+        +materialized: table
 
 seeds:
   bi_stack:
@@ -45,3 +51,18 @@ seeds:
         price_zar_per_ton: numeric(10, 2)
         hedge_pct: numeric(5, 2)
         delivery_date: date
+    dc:
+      +schema: retail_dc
+      dim_sku:
+        +column_types:
+          unit_price_zar: numeric(12, 2)
+          case_price_zar: numeric(14, 2)
+          pallet_weight_kg: numeric(10, 1)
+          shelf_life_days: integer
+      dim_store:
+        +column_types:
+          open_date: date
+      fct_pallet_stock:
+        +column_types:
+          received_date: date
+          best_before_date: date

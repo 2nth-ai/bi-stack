@@ -55,5 +55,5 @@ services:
     depends_on:
       superset-init:
         condition: service_completed_successfully
-    command: ["celery", "--app=superset.tasks.celery_app:app", "beat", "--loglevel=INFO"]
+    command: ["celery", "--app=superset.tasks.celery_app:app", "beat", "--loglevel=INFO", "--schedule=/tmp/celerybeat-schedule"]
     restart: unless-stopped

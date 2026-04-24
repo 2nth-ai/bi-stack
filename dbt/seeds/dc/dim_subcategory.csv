@@ -1,0 +1,123 @@
+subcategory_id,category_id,subcategory_name
+1,1,Rice
+2,1,Pasta
+3,1,Flour
+4,1,Sugar
+5,1,Cooking Oil
+6,1,Beans & Pulses
+7,1,Canned Vegetables
+8,1,Canned Fish
+9,1,Canned Fruit
+10,1,Sauces & Condiments
+11,1,Spices & Herbs
+12,1,Tea
+13,1,Coffee
+14,1,Breakfast Cereal
+15,2,Bread
+16,2,Rolls & Buns
+17,2,Rusks
+18,2,Biscuits
+19,2,Crackers
+20,3,Fresh Milk
+21,3,Long-Life Milk
+22,3,Yoghurt
+23,3,Cheese
+24,3,Butter
+25,3,Margarine
+26,3,Cream
+27,3,Eggs
+28,3,Chilled Juice
+29,4,Frozen Vegetables
+30,4,Frozen Chips
+31,4,Frozen Chicken
+32,4,Frozen Fish
+33,4,Ice Cream
+34,4,Frozen Ready Meals
+35,4,Frozen Pastry
+36,5,Carbonated Soft Drinks
+37,5,Fruit Juice
+38,5,Bottled Water
+39,5,Energy Drinks
+40,5,Sports Drinks
+41,5,Cordials
+42,5,Iced Tea
+43,6,Beer
+44,6,Cider
+45,6,Red Wine
+46,6,White Wine
+47,6,Rose Wine
+48,6,Whisky
+49,6,Vodka
+50,6,Rum
+51,6,Brandy
+52,6,Gin
+53,6,Liqueurs
+54,6,RTD
+55,7,Chocolates
+56,7,Sweets & Candy
+57,7,Chewing Gum
+58,7,Potato Chips
+59,7,Savoury Snacks
+60,7,Nuts & Seeds
+61,7,Biltong & Droewors
+62,7,Popcorn
+63,8,Shampoo
+64,8,Conditioner
+65,8,Body Wash
+66,8,Bar Soap
+67,8,Deodorant
+68,8,Toothpaste
+69,8,Shaving
+70,8,Oral Care
+71,8,Hand Care
+72,9,Dishwash Liquid
+73,9,Laundry Powder
+74,9,Laundry Liquid
+75,9,Fabric Softener
+76,9,Bleach
+77,9,Surface Cleaner
+78,9,Floor Care
+79,9,Toilet Care
+80,9,Air Freshener
+81,10,Disposable Nappies
+82,10,Baby Wipes
+83,10,Infant Formula
+84,10,Baby Food
+85,10,Baby Toiletries
+86,11,Dry Dog Food
+87,11,Wet Dog Food
+88,11,Dry Cat Food
+89,11,Wet Cat Food
+90,11,Pet Treats
+91,11,Small Animal Food
+92,12,Skincare
+93,12,Cosmetics
+94,12,Fragrance
+95,12,Hair Styling
+96,12,Hair Colour
+97,12,Sun Care
+98,13,OTC Medicines
+99,13,Vitamins & Supplements
+100,13,First Aid
+101,13,Feminine Hygiene
+102,13,Incontinence
+103,14,Cigarettes
+104,14,Tobacco & Rolling
+105,15,School Stationery
+106,15,Office Paper
+107,15,Writing Instruments
+108,15,Magazines
+109,16,Cookware
+110,16,Kitchen Disposables
+111,16,Hardware
+112,16,Small Electricals
+113,16,Toys
+114,17,Cold Meats
+115,17,Packaged Cheese Platters
+116,17,Prepared Salads
+117,17,Sandwiches
+118,18,Potatoes Bulk
+119,18,Onions Bulk
+120,18,Butternut Bulk
+121,18,Apples Bulk
+122,18,Oranges Bulk
